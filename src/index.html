@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Šavásana studio</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <a href="/kodex/">Kodex studia</a>
+        <a href="/lekce/">Lekce</a>
+        <a href="/cenik/">Ceník</a>
+        <a href="/aktuality/">Aktuality</a>
+        <a href="/onas/">O nás</a>
+        <a href="/kontakt/">Kontakt</a>
+        <a href="https://rezervujeme.cz/savasana/">Rezervace</a>
+    </header>
+
+    <main>
+        <div class="news--latest only--mobile">
+        {% assign latest = collections.news | first %}
+        <article class="news-item">
+            {% if latest.data.image %}
+            <div class="news-image">
+                <img src="{{ latest.data.image }}" alt="Image">
+            </div>
+            {% endif %}
+            
+            <div class="news-content">
+                <div class="news-header">
+                    {% if latest.date %}
+                    <p class="news-date">{{ latest.date | readableDate }}</p>
+                    {% endif %}
+
+                    <h2>{{ latest.data.title }}</h2>
+                    
+                    {% if latest.data.category %}
+                    <p class="news-category">{{ latest.data.category }}</p>
+                    {% endif %}
+                </div>
+
+                <div class="news-text">
+                {{ latest.templateContent }}
+                </div>
+                
+            </div>
+        </article>
+        </div>
+
+
+        <div class="news-latest3 only-desktop">
+        {% assign latestThree = sorted | slice: 0, 3 %}
+        {% for post in latestThree %}
+            <article class="news-item">
+                <div class="news-content">
+                    <div class="news-header">
+                        {% if post.data.image %}
+                        <div class="news-image">
+                            <img src="{{ post.data.image }}" alt="Image">
+                        </div>
+                        {% endif %}
+
+                        <h2>{{ post.data.title }}</h2>
+
+                        {% if post.date %}
+                        <p class="news-date">{{ post.date | readableDate }}</p>
+                        {% endif %}
+
+                        {% if post.data.category %}
+                        <p class="news-category">{{ post.data.category }}</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="news-text">
+                    {{ post.templateContent }}
+                    </div>
+                    
+                </div>
+            </article>
+        {% endfor %}
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; Pražáková 2025</p>
+    </footer>
+
+    <script>
+    const params = new URLSearchParams(window.location.hash.slice(1));
+    if (params.has("invite_token")) {
+        window.location.href = `/admin/#invite_token=${params.get("invite_token")}`;
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/react@19/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@19/umd/react-dom.production.min.js"></script>
+</body>
+</html>

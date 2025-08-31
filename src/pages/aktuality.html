@@ -1,0 +1,58 @@
+---
+title: Aktuality
+permalink: /aktuality/index.html
+---
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Šavásana studio | Aktuality</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html">Domů</a>
+  </header>
+
+  <main> 
+
+    <div class="news--all">
+      {% for post in collections.news %}
+      <article class="news-item">
+                {% if latest.data.image %}
+                    <div class="news-image">
+                    <img src="{{ latest.data.image }}" alt="Image">
+                    </div>
+                {% endif %}
+              <div class="news-content">
+                <div class="news-header">
+                  <h2>{{ latest.data.title }}</h2>
+                  
+                  {% if latest.data.category %}
+                      <p class="news-category">{{ latest.data.category }}</p>
+                  {% endif %}
+                </div>
+
+                <div class="news-text">
+                    {{ latest.templateContent }}
+                </div>
+                
+                {% if latest.date %}
+                    <p class="news-date">{{ latest.date | readableDate }}</p>
+                {% endif %}
+              </div>
+      </article>
+      {% endfor %}
+    </div>
+
+  </main>
+
+
+
+  <footer>
+    <p>&copy; Pražáková 2025</p>
+  </footer>
+</body>
+</html>
