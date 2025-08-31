@@ -1,8 +1,3 @@
----
-title: Aktuality
-permalink: /aktuality/index.html
----
-
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -10,7 +5,7 @@ permalink: /aktuality/index.html
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Studio Šavásana, jóga pv Jablonci. Nabízíme lekce jógy, dechová cvičení a relaxaci. Přijďte si odpočinout.">
   <meta name="keywords" content="jóga Jablonec, jóga i pro začátečníky, relaxace, dechová cvičení, studio Šavásana">
-  <title>Jógové studio | Aktuality</title>
+  <title>Jógové studio | Lektoři</title>
   <link rel="icon" href="../static/img/logo.png" type="image/png">
   <link rel="stylesheet" href="../static/css/style.css" />
 </head>
@@ -46,47 +41,14 @@ permalink: /aktuality/index.html
    </nav>
   </header>
 
-
-
-  <main> 
-
-    <div class="news--all">
-      {% for post in collections.news %}
-      <article class="news-item">
-                {% if latest.data.image %}
-                    <div class="news-image">
-                    <img src="{{ latest.data.image }}" alt="Image">
-                    </div>
-                {% endif %}
-              <div class="news-content">
-                <div class="news-header">
-                  <h2>{{ latest.data.title }}</h2>
-                  
-                  {% if latest.data.category %}
-                      <p class="news-category">{{ latest.data.category }}</p>
-                  {% endif %}
-                </div>
-
-                <div class="news-text">
-                    {{ latest.templateContent }}
-                </div>
-                
-                {% if latest.date %}
-                    <p class="news-date">{{ latest.date | readableDate }}</p>
-                {% endif %}
-              </div>
-      </article>
-      {% endfor %}
-    </div>
-
-  </main>
+    <main>
+    </main>
 
 
 
-  <footer>
-    <p>&copy; Pražáková 2025</p>
-  </footer>
-
-  <script src="../static/js/hamburger.js"></script>
-</body>
-</html>
+    <footer>
+        <p>&copy; Pražáková 2025</p>
+    </footer>
+    <script src="../static/js/hamburger.js"></script>
+    </body>
+    </html>

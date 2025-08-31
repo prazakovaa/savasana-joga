@@ -1,0 +1,60 @@
+@layer dropdown {
+.questions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.dropbtn {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  background-color: white;
+  border: 1px solid var(--color-primary);
+  color: var(--color-dark);
+  padding: 16px;
+  font-size: 16px;
+  margin: 0 auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  padding: 1rem 2rem;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a {
+  color: var(--color-primary);
+  padding: 0.2rem;
+  display: inline-block;
+  width: max-content;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: var(--color-secondary)}
+
+@media (min-width: 1080px) {
+.dropbtn {
+		width: 73%;
+    }
+  }
+}

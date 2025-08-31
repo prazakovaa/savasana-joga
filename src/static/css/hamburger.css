@@ -1,0 +1,139 @@
+@layer hamburger {
+.hamburger-row {
+    z-index: 2;
+}
+
+.hamburger {
+    position: relative;
+    display: inline-block;
+    width: 32px;
+    height: 25px;
+    overflow-x: hidden;
+}
+
+.hamburger-btn{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    right: 0;
+    height: 4px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+    width: 32px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 10px;
+    width: 24px;
+}
+
+.hamburger span:nth-child(3) {
+    bottom: 0;
+    width: 32px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/*hamburger-menu*/
+
+.hamburger-nav {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: -120%;
+    width: 100%;
+    transition: left calc(4.5 * var(.5s, .125s)) ease-in-out;
+    padding: 6rem 2rem;
+    background: linear-gradient(90deg, rgba(239, 141, 75, 0.06) 0%, rgba(217, 91, 6, 0.27) 80%);
+    background-color: #FFFFFF;
+    z-index: 1;
+    transition: left 0.4s ease-in;
+}
+
+.hamburger-nav.active {
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem 1rem 1.5rem;
+}
+
+@media screen and (max-width: 1079px) {
+.hamburger-nav .menu { width: 85% }
+.hamburger-nav .menu--active { border-left: 1px solid var(--color-primary); background-color: rgba(239, 141, 75, 0.1);}
+.hamburger-nav a {
+    padding: 0.6rem;
+    margin: 0.4rem;
+}
+}
+
+
+
+@media screen and (min-width: 1080px) {
+    .hamburger-row {
+        display: none;
+    }
+
+    .hamburger-nav {
+        position: static;
+        display: flex;
+		padding: 0 4%;
+		justify-content: space-between;
+		align-items: center;
+        background: linear-gradient(90deg, rgba(217, 91, 6, 0.8) 0%, rgba(225, 155, 108, 0.89) 100%);
+        overflow: visible;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+    }
+    .links a {
+        color: white;
+    }
+    .nav .hamburger-nav {
+        position: static;
+        display: flex;
+		width: 90%;
+		padding: 0 .8rem;
+		justify-content: center;
+		align-items: center;
+		gap: 7%;
+		border-radius: 0px;
+        overflow: visible;
+        background: var(--color-light);
+    }
+    .nav .hamburger-nav a { color: var(--color-dark); }
+    .nav .hamburger-nav .menu::after, .nav .hamburger-nav .menu::before { background: var(--color-dark); }
+    .nav .hamburger-nav .menu.active::after, .nav .hamburger-nav .menu.active::before { background: var(--color-primary); }
+    .nav .hamburger-nav .menu.active a { color: var(--color-primary); }
+
+}
+
+}

@@ -1,23 +1,78 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Šavásana studio</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio Šavásana, jóga pv Jablonci. Nabízíme lekce jógy, dechová cvičení a relaxaci. Přijďte si odpočinout.">
+  <meta name="keywords" content="jóga Jablonec, jóga i pro začátečníky, relaxace, dechová cvičení, studio Šavásana">
+  <title>Jógové studio</title>
+  <link rel="icon" href="static/img/logo.png" type="image/png">
+  <link rel="stylesheet" href="/static/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
-<body>
-    <header>
-        <a href="/kodex/">Kodex studia</a>
-        <a href="/lekce/">Lekce</a>
-        <a href="/cenik/">Ceník</a>
-        <a href="/aktuality/">Aktuality</a>
-        <a href="/onas/">O nás</a>
-        <a href="/kontakt/">Kontakt</a>
-        <a href="https://rezervujeme.cz/savasana/">Rezervace</a>
+
+<body class="page">
+
+<header class="page__header-main">
+    <!-- NAVIGACE + HAMBURGER MENU -->
+    <nav class="header__nav">
+        <a class="header-logo" href="index.html" aria-label="Domů">
+        <img class="header-logo-img img-responsive only-mobile" src="static/img/logo.png" alt="Šavásana studio logo">
+        </a>
+   
+        <div class="page__header-hamburger hamburger-row">
+        <button class="hamburger hamburger-btn hamburger-zone" aria-label="Otevřít menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        </div>
+        <menu class="page__header-menu hamburger-nav hamburger-zone">
+        <h1 class="only-desktop">ŠAVÁSÁNA <span class="fancy-text">  studio</span></h1>
+        <div class="links">
+        <li class="menu menu--active only-mobile"><a href="index.html">Hlavní stránka</a></li>
+        <li class="menu"><a href="/kodex/">Kodex studia</a></li>
+        <li class="menu"><a href="/lekce/">Lekce</a></li>
+        <li class="menu"><a href="/cenik/">Ceník</a></li>
+        <li class="menu"><a href="/aktuality/">Aktuality</a></li>
+        <li class="menu only-mobile"><a href="/onas/">O nás</a></li>
+        <li class="menu"><a href="/lektori/">Lektoři</a></li>
+        <li><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
+        </div>
+        </menu>
+   </nav>
+
+   <!-- HEADER POZADÍ -->
+   <div class="only-mobile">
+   <div class="header__main">
+    <div class="header-top">
+      <p class="color">Vaše oblíbená jóga v srdci Jablonce.</p>
+      <h1>ŠAVÁSANA
+        <span class="fancy-text">studio</span>
+      </h1>
+    </div>
+    <div class="header-bottom">
+      <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">
+        Rezervace</a>
+      <a href="#main-page"><img src="static/img/icons/arrow.svg" alt="Ukazovací šipka"></a>
+    </div>
+   </div>
+   </div>
+
+   <div class="only-desktop">
+    <div class="header__main">
+      <h1>Jóga je více, <br> než jen fyzické cvičení.</h1>
+      <p class="color">Jsme rodinné jógové studio pro lidi se zájmem <br>o zdravý pohyb. Vaše oblíbená jóga v srdci Jablonce.</p>
+      <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">Rezervace</a>
+    </div>
+   </div>
+    </div>
+   </div>
+  </header>
+
     </header>
 
-    <main>
+    <main class="page__content" id="main-page">
         <div class="news--latest only--mobile">
         {% assign latest = collections.news | first %}
         <article class="news-item">
@@ -96,5 +151,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/react@19/umd/react.production.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/react-dom@19/umd/react-dom.production.min.js"></script>
+    <script src="static/js/hamburger.js"></script>
 </body>
 </html>
