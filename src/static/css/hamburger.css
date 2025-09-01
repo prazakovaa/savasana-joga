@@ -99,14 +99,24 @@
         display: none;
     }
 
+    .header__nav {
+        position: fixed;
+        top: 0;
+        
+        z-index: 10;
+        width: 100%;
+    }
+
     .hamburger-nav {
+        transition: 0.1s ease-in-out;
         position: static;
         display: flex;
-		padding: 0 4%;
+		padding: 0.5rem 4%;
 		justify-content: space-between;
 		align-items: center;
         background: linear-gradient(90deg, rgba(217, 91, 6, 0.8) 0%, rgba(225, 155, 108, 0.89) 100%);
         overflow: visible;
+
     }
 
     .links {

@@ -9,6 +9,7 @@
   <link rel="icon" href="static/img/logo.png" type="image/png">
   <link rel="stylesheet" href="/static/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="static/js/main.js"></script>
 </head>
 
 <body class="page">
@@ -27,7 +28,7 @@
             <span></span>
         </button>
         </div>
-        <menu class="page__header-menu hamburger-nav hamburger-zone">
+        <menu class="page__header-menu hamburger-nav hamburger-zone" id="navbar">
         <h1 class="only-desktop">ŠAVÁSÁNA <span class="fancy-text">  studio</span></h1>
         <div class="links">
         <li class="menu menu--active only-mobile"><a href="index.html">Hlavní stránka</a></li>
@@ -73,6 +74,9 @@
     </header>
 
     <main class="page__content" id="main-page">
+
+        <h2 class="color"><span class="fancy-text">Dýchej.</span> Vše ostatní přijde samo.</h2>
+
         <div class="news--latest only--mobile">
         {% assign latest = collections.news | first %}
         <article class="news-item">
@@ -149,8 +153,6 @@
     }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/react@19/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@19/umd/react-dom.production.min.js"></script>
     <script src="static/js/hamburger.js"></script>
 </body>
 </html>
