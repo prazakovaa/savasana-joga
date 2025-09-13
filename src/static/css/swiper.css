@@ -37,6 +37,7 @@
   transform: translateY(-50%);
   z-index: 1;
   color: var(--color-primary); /* SVG šipky */
+  filter: invert(100%);
 }
 
 .swiper-button-prev {

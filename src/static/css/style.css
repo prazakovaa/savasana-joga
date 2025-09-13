@@ -159,12 +159,13 @@ border: 0 solid;
 		transition: color 0.2s ease-in-out;
 	}
 	.link:hover{
-		color: var(--color-dark);
+		color: var(--color-secondary);
 	}
 	.icon-link {
 		display: flex;
 		align-content: center;
 		margin: 0.7rem;
+		transition: color ease-in-out.2s;
 	}
 	.icon-link:hover {
 		color: var(--color-primary);
@@ -217,6 +218,29 @@ border: 0 solid;
 		padding: 0;
 		object-fit: cover;
 	}
+	.readmore {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.readmore .extra {
+  display: inline-block;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.readmore:hover .extra {
+  transform: translateX(0);
+}
+
+.readmore:hover {
+  padding-left: 5px; /* text se mírně posune doprava */
+}
+
 }
 @layer design {
 
@@ -293,6 +317,7 @@ border: 0 solid;
 		flex-direction: column;
 		height: 22vh;
 		justify-content: space-between;
+		align-items: center;
 	}
 	.header-logo-img{
 		width: 5rem;
@@ -318,17 +343,12 @@ border: 0 solid;
 		gap: 3rem;
 		flex-direction: row;
 		max-width: 1400px;
-		height: 200px;
 		background-color: white;
-	}
-	.section-bigger {
-		height: 240px;
 	}
 	.article-section img {
 		display: block;
 		aspect-ratio: 3 / 2;
 		width: 360px;
-		height: 100%;
 		object-fit: cover;
 	}
 	.article-footer {
@@ -367,6 +387,20 @@ border: 0 solid;
 		padding: 1rem;
 		background-color: white;
 	}
+	.article-section .article-text h3, a{
+		margin-left: 0.3rem;
+		transition: color ease-in-out .2s;
+	}
+	.article-section .article-text{
+		padding: 1rem;
+	}
+	.article-text-main {
+		padding-left: 1rem;
+		border-left: 2px solid var(--color-primary);
+	}
+	.article-text-main h3 {
+		margin-bottom: -1rem;
+	}
 	.service-card img {
 		height: 210px;
 	}
@@ -401,9 +435,10 @@ border: 0 solid;
 	.asked-main {
 		display: flex;
 		justify-content: space-between;
+		gap: 3rem;
 	}
 	.questions {
-		width: 100%;
+		width: 80%;
 	}
 	.contact-line{
 		border-left: 3px solid var(--color-primary);

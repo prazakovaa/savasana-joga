@@ -77,52 +77,115 @@
 
         <h2 class="color"><span class="fancy-text">Dýchej.</span> Vše ostatní přijde samo.</h2>
 
+        <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="article article-card">
+            <img src="static/img/article1.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <h3>Jóga jako prostor pro sebe</h3>
+              <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít vnitřní rovnováhu. Ať už hledáte...</p>
+              <a class="link" target="_blank" href="pages/clanky/joga.html">Chci o józe vědět více</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="article article-card article-big">
+            <img src="static/img/article2.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <h3>Naše cesta začala zde, vaše může taky</h3>
+              <p class="less">Jsme rodinné jógové studio pro lidi se zájmem o zdravý pohyb, kteří stejně jako my vnímají, že jóga zdaleka není jen o cvičení ásan.</p>
+              <a class="icon-link map less" target="_blank" href="https://maps.app.goo.gl/caBHJndX2LATne9t5">Rooseveltova 2786/3, 466 01  JBC</a>
+              <a class="icon-link facebook less" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Šavásána studio</a>
+              <a class="link" target="_blank" href="pages/onas.html">Chci o vás vědět více</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="article article-card">
+            <img src="static/img/article3.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <h3>Poprvé na podložce? Vše, co potřebujete vědět.</h3>
+              <p class="less">Na józe je krásné, že ji může začít praktikovat kdokoliv a v jakémkoliv věku. Forem jógy je totiž mnoho a každý si tu svou, která ho v daný moment na jeho cestě podpoří, může najít. Doporučujeme vyzkoušet různé...</p>
+              <a class="link" target="_blank" href="pages/clanky/zacatek.html">Číst celý článek</a>
+            </div>
+          </div>
+        </div>
+        ...
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <noscript>
+        <p>Jógové studio s naučnými články o józe! Naučte se u nás základy jógy pro úplné začátečníky!</p>
+      </noscript>
+
+      <div class="only-desktop">
+            <div class="article-section">
+            <img src="static/img/article1.avif" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <p class="article-description color">Naučný článek</p>
+              <div class="article-text-main">
+                <h3>Jóga jako prostor pro sebe</h3>
+                <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít vnitřní rovnováhu. Ať už hledáte...</p>
+              </div>
+              <a href="pages/clanky/joga.html" target="_blank" class="link color">Číst celý článek</a>
+            </div>
+          </div>
+          </div>
+    </div class="news">
         <div class="news--latest only-mobile">
         {% assign latest = collections.news | first %}
         <article class="news-item">
-            {% if latest.data.image %}
-            <div class="news-image">
-                <img src="{{ latest.data.image }}" alt="Image">
-            </div>
-            {% endif %}
-            
-            <div class="news-content">
-                <div class="news-header">
-                    {% if latest.date %}
-                    <p class="news-date">{{ latest.date | readableDate }}</p>
-                    {% endif %}
+      <div class="news-profile">
+        <img src="static/img/article2.avif" alt="Profilová fotografie, portrét">
+        <div class="profile-name">
+          <p class="name">Poslední aktuality</p>
+          <p class="less">@Šavásana studio</p>
+        </div>
+      </div>
 
-                    <h2>{{ latest.data.title }}</h2>
-                    
-                    {% if latest.data.category %}
-                    <p class="news-category">{{ latest.data.category }}</p>
-                    {% endif %}
-                </div>
+      <div class="news-content">
+        <div class="news-header">
 
-                <div class="news-text">
-                {{ latest.templateContent }}
-                </div>
-                
-            </div>
-        </article>
+          <h2>{{ item.data.title }}</h2>
+
+          {% if item.data.category %}
+            <p class="news-category">{{ item.data.category }}</p>
+          {% endif %}
         </div>
 
+        <div class="news-text">
+          {{ item.templateContent }}
+        </div>
 
-        <div class="news--three only-desktop">
-  {% assign latest = collections.news %}
-  {% for item in latest limit:3 %}
-    <article class="news-item">
-      {% if item.data.image %}
+        {% if item.data.image %}
         <div class="news-image">
           <img src="{{ item.data.image }}" alt="Image">
         </div>
       {% endif %}
+      </div>
+      </article>
+    </div>
+
+    <div class="only-desktop">
+        <div class="news--three">
+  {% assign latest = collections.news %}
+  {% for item in latest limit:3 %}
+    <article class="news-item">
+      <div class="news-profile">
+        <img src="static/img/article2.avif" alt="Profilová fotografie, portrét">
+        <div class="profile-name">
+          <p class="name">Poslední aktuality</p>
+          <p class="less">@Šavásana studio</p>
+        </div>
+      </div>
 
       <div class="news-content">
+        <div class="news-info">
         <div class="news-header">
-          {% if item.date %}
-            <p class="news-date">{{ item.date | readableDate }}</p>
-          {% endif %}
 
           <h2>{{ item.data.title }}</h2>
 
@@ -135,9 +198,160 @@
           {{ item.templateContent }}
         </div>
       </div>
+        {% if item.data.image %}
+        <div class="news-image">
+          <img src="{{ item.data.image }}" alt="Image">
+        </div>
+      {% endif %}
+      </div>
     </article>
   {% endfor %}
 </div>
+</div>
+
+<a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na našem <span class="color"> Facebooku</span></a>
+    </section>
+
+    <div class="only-desktop">
+      <div class="article-section section-bigger">
+            <img src="static/img/article2.avif" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <p class="article-description color">Naučný článek</p>
+              <div class="article-text-main">
+              <h3>Naše cesta začala zde, vaše může taky</h3>
+              <p class="less">Jsme rodinné jógové studio pro lidi se zájmem o zdravý pohyb, kteří stejně jako my vnímají, že jóga zdaleka není jen o cvičení ásan.</p>
+              <a class="icon-link map less" target="_blank" href="https://maps.app.goo.gl/caBHJndX2LATne9t5">Rooseveltova 2786/3, 466 01  JBC</a>
+              </div>
+              <div class="article-footer">
+                <a class="link" target="_blank" href="/pages/onas.html">Chci o vás vědět více</a>
+                <div class="icons">
+                  <a target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">
+                  <img src="static/img/icons/facebook.svg" alt="Logo facebooku">
+                </a>
+                <a href="tel:+420606233421">
+                  <img src="static/img/icons/phone.svg" alt="Ikona telefonu">
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    <section class="service">
+      <div class="service-header">
+      <h2>Na co se můžete těšit</h2>
+      <a class="icon-link reserve only-mobile" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ"><span class="color">Zde</span> najdete více o <span class="color">všech</span> lekcích</a>
+      <a href="#" class="btn btn--sign only-desktop">Všechny lekce</a>
+    </div>
+      <div class="service-cardss">
+        <div class="article service-card">
+            <div class="stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+            </div>
+            <img src="static/img/article2.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <div class="card-header">
+                <h3>Ranní jóga</h3>
+                <p class="lektor color">Jana Huková</p>
+              </div>
+              <p class="less">Dobré ráno s jógou je ranní hatha flow pro lepší začátek dne. <br> Protažení těla, energizující dechové techniky a sekvence jógových ásan pro vaši pružnou páteř, aktivní postoj a zapojení středu těla.</p>
+              <a class="link" target="_blank" href="#">Více o této lekci →</a>
+            </div>
+        </div>
+        <div class="article service-card">
+          <div class="stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+            </div>
+            <img src="static/img/article2.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <div class="card-header">
+                <h3>Jóga pro zdravá záda</h3>
+                <p class="lektor color">Petr Huk</p>
+              </div>
+              <p class="less">Jógová praxe zaměřená primárně na uvolnění páteře a protažení svalů, jejichž zkrácení může způsobovat bolesti zad. <br> Nevynecháme ani posílení svalů, které nám pomáhají mít napřímenou páteř a správnou posturu těla.</p>
+              <a class="link" target="_blank" href="#">Více o této lekci →</a>
+            </div>
+        </div>
+        <div class="article service-card">
+          <div class="stars">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+            </div>
+            <img src="static/img/article2.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <div class="card-header">
+                <h3>Jóga pro ženy</h3>
+                <p class="lektor color">Jana Huková</p>
+              </div>
+              <p class="less">Jóga pro ženy, jejíž fyzická intenzita se v průběhu roku mění dle ročních období. Můžete očekávat delší úvodní naladění a rozhýbání ve stylu hatha jógy, dechová cvičení, protažení a posílení. Vše zakončené příjemnou relaxací.</p>
+              <a class="link" target="_blank" href="#">Více o této lekci →</a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+          <div class="only-desktop">
+            <div class="article-section">
+            <img src="static/img/article3.avif" alt="Náhledová fotografie k článku">
+            <div class="article-text">
+              <p class="article-description color">Naučný článek</p>
+              <div class="article-text-main">
+              <h3>Poprvé na podložce? Vše, co potřebujete vědět.</h3>
+              <p class="less">Na józe je krásné, že ji může začít praktikovat kdokoliv a v jakémkoliv věku. Forem jógy je totiž mnoho a každý si tu svou, která ho v daný moment na jeho cestě podpoří, může najít. Doporučujeme vyzkoušet různé...</p>
+              </div>
+              <a class="link" target="_blank" href="pages/clanky/zacatek.html">Číst celý článek</a>
+            </div>
+          </div>
+          </div>
+
+    <section class="asked">
+      <h2>Často kladené otázky</h2>
+      <div class="asked-main">
+      <div class="questions">
+        <div class="dropdown">
+          <button class="dropbtn">Je nějaké zvýhodněně vstupné?
+            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
+          </button>
+          <div class="dropdown-content">
+            <p>Ano! Nabízíme <a class="color "href="#">předplacené kurzy a dárkové poukazy</a>! Při platbě kreditem v našem <a class="color" href="https://rezervujeme.cz/savasana/">rezervačním systému</a> máte automaticky vstup vyhodnější.</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Kde zjistím obtížnosti lekcí?
+            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
+          </button>
+          <div class="dropdown-content">
+            <p>Obtížnosti jsou vypsány buď v <a class="color "href="#">popisu lekce</a> nebo je uvidíte při <a class="color "href="https://rezervujeme.cz/savasana/">rezervaci</a> lekce.</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Do kdy je možné se na lekci přihlásit?
+            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
+          </button>
+          <div class="dropdown-content">
+            <p>Přihlásit se na lekci je možné až do jejího začátku, pokud jsou volná místa. Pokud je obsazení zase naopak malé, je možné, že se lekce zruší, zpravidla 2h před jejím začátkem. V takovém případě obdžíte email.</p>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Pokud nakonec nemůžu, jak se odhlásím?
+            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
+          </button>
+          <div class="dropdown-content">
+            <p>Nejjednoduší rušení vašich lekcí je přes náš <a class="color" href="https://rezervujeme.cz/savasana/">rezervační systém</a> nejpozději 6h před danou lekcí.</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact only-desktop">
+        <h4>Také máte dotaz?</h4>
+        <div class="contact-line"><p>Zeptejte se konkrétního lektora vaší vysněné lekce, telefonní číslo zjístíte v sekci <a class="color" href="/pages/kontakt.html">“Kontakt”</a></p></div>
+        <div class="contact-line"><p>Pro všeobecné dotazy můžete využít číslo: <a class="color" href="tel:+420606233421">+420 606 233 421</a></p></div>
+      </div>
+      </div>
+    </section>
 
         
         <div class="footer-logo">
@@ -198,7 +412,20 @@
         window.location.href = `/admin/#invite_token=${params.get("invite_token")}`;
     }
     </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+</script>
     <script src="static/js/hamburger.js"></script>
 </body>
 </html>
