@@ -38,14 +38,14 @@
         <li class="menu"><a href="/aktuality/">Aktuality</a></li>
         <li class="menu only-mobile"><a href="/onas/">O nás</a></li>
         <li class="menu"><a href="/lektori/">Lektoři</a></li>
-        <li class="only-mobile"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
+        <li class="only-desktop"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
         </ul>
     </div>
    </nav>
 
    <!-- HEADER POZADÍ -->
    <div class="only-mobile">
-   <div class="header__main">
+   <div class="header__main main-m-other">
     <div class="header-top">
       <p class="color">Vaše oblíbená jóga v srdci Jablonce.</p>
       <h1>ŠAVÁSANA
@@ -55,7 +55,7 @@
     <div class="header-bottom">
       <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">
         Rezervace</a>
-      <a href="#main-page"><img src="static/img/icons/arrow.svg" alt="Ukazovací šipka"></a>
+      <a href="#main-page"><img src="static/img/icons/arrow.svg" style="opacity: 0.5;" alt="Ukazovací šipka"></a>
     </div>
    </div>
    </div>
@@ -77,7 +77,7 @@
 
         <h2 class="color"><span class="fancy-text">Dýchej.</span> Vše ostatní přijde samo.</h2>
 
-        <div class="news--latest only--mobile">
+        <div class="news--latest only-mobile">
         {% assign latest = collections.news | first %}
         <article class="news-item">
             {% if latest.data.image %}
@@ -108,42 +108,88 @@
         </div>
 
 
-        <div class="news-latest3 only-desktop">
-        {% assign latestThree = sorted | slice: 0, 3 %}
-        {% for post in latestThree %}
-            <article class="news-item">
-                <div class="news-content">
-                    <div class="news-header">
-                        {% if post.data.image %}
-                        <div class="news-image">
-                            <img src="{{ post.data.image }}" alt="Image">
-                        </div>
-                        {% endif %}
+        <div class="news--three only-desktop">
+  {% assign latest = collections.news %}
+  {% for item in latest limit:3 %}
+    <article class="news-item">
+      {% if item.data.image %}
+        <div class="news-image">
+          <img src="{{ item.data.image }}" alt="Image">
+        </div>
+      {% endif %}
 
-                        <h2>{{ post.data.title }}</h2>
+      <div class="news-content">
+        <div class="news-header">
+          {% if item.date %}
+            <p class="news-date">{{ item.date | readableDate }}</p>
+          {% endif %}
 
-                        {% if post.date %}
-                        <p class="news-date">{{ post.date | readableDate }}</p>
-                        {% endif %}
+          <h2>{{ item.data.title }}</h2>
 
-                        {% if post.data.category %}
-                        <p class="news-category">{{ post.data.category }}</p>
-                        {% endif %}
-                    </div>
-
-                    <div class="news-text">
-                    {{ post.templateContent }}
-                    </div>
-                    
-                </div>
-            </article>
-        {% endfor %}
+          {% if item.data.category %}
+            <p class="news-category">{{ item.data.category }}</p>
+          {% endif %}
         </div>
 
+        <div class="news-text">
+          {{ item.templateContent }}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+        
+        <div class="footer-logo">
+            <p class="h1 color">ŠAVÁSÁNA</p>
+            <span class="fancy-text color">studio</span>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; Pražáková 2025</p>
+    <footer class="page__footer">
+        
+        <div class="footer__main">
+            <div class="only-desktop">
+            <div class="footer__statictics">
+                <div class="footer-number">
+                    <p class="big">250+</p>
+                    <p>Lekcí za rok.</p>
+                </div>
+                <div class="footer-CTA">
+                    <p>Tak na které se potkáme?</p>
+                    <a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervujte si lekci</a>
+                </div>
+            </div>
+            </div>
+            <a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign only-mobile">Rezervace</a>
+            <p>Stačí udělat první krok. <span class="fancy-text">My</span> tě povedeme dál.</p>
+            <div class="only-desktop">
+            <div class="footer__links">
+                <div class="import-links">
+                    <p class="h2">Důležité lekce</p>
+                    <a href="https://rezervujeme.cz/savasana/" class="icon-link reser">Rezervace lekcí</a>
+                    <a href="" class="icon-link service">Nabídka lekcí</a>
+                    <a href="" class="icon-link house">Pronájem studia</a>
+                </div>
+                <div class="credit-links">
+                    <p class="h2">Design webu</p>
+                    <a href="https://www.instagram.com/nprazaak/" class="icon-link person">Nella Pražáková</a>
+                    <a href="tel:+420728605509" class="icon-link phone">+420 728 605 509</a>
+                    <a href="mailto:prazakovaanella@gmail.com" class="icon-link email">prazakovaanella@gmail.com</a>
+                </div>
+            </div>
+            </div>
+        
+        <div class="footer__icons">
+            <a href="https://www.facebook.com/savasanajablonec">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="#fff" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+            </a>
+            <a href="tel:+420606233421">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 56 56"><path fill="#fff" d="M28 51.906c13.055 0 23.906-10.851 23.906-23.906c0-13.078-10.875-23.906-23.93-23.906C14.899 4.094 4.095 14.922 4.095 28c0 13.055 10.828 23.906 23.906 23.906m-6.117-18.07c-5.813-5.79-9.516-13.172-5.133-17.555c.258-.258.539-.515.797-.773c1.336-1.266 2.625-1.195 3.773.422l3.047 4.336c1.031 1.5.773 2.343-.328 3.515l-.961 1.055c-.351.328-.21.773-.047 1.055c.446.843 1.711 2.343 3.07 3.703c1.407 1.406 2.836 2.601 3.727 3.093c.328.188.797.235 1.102-.046l1.007-.961c1.125-1.102 2.04-1.383 3.493-.352a319 319 0 0 0 4.43 3.094c1.476 1.078 1.827 2.414.327 3.773c-.257.258-.492.54-.75.797c-4.382 4.36-11.742.656-17.554-5.156"/></svg>
+            </a>
+        </div>
+        <p>&copy; Šavásana studio 2025, Pražáková</p>
+    </div>
     </footer>
 
     <script>

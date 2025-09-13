@@ -39,7 +39,7 @@ permalink: /aktuality/index.html
         <li class="menu menu--active"><a href="../aktuality">Aktuality</a></li>
         <li class="menu only-mobile"><a href="../onas">O nás</a></li>
         <li class="menu"><a href="../lektori">Lektoři</a></li>
-        <li class="only-mobile"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
+        <li class="only-desktop"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
         </div>
         </menu>
    </nav>
@@ -47,6 +47,7 @@ permalink: /aktuality/index.html
    <div class="header__main main--other">
       <h1>Aktuality</h1>
       <p class="color only-desktop">To nejaktuálnější z našeho studia.</p>
+      <p class="color only-mobile">To nejaktuálnější!</p>
     </div>
    </div>
     </div>
@@ -57,34 +58,36 @@ permalink: /aktuality/index.html
 
   <main>
 
-    <div class="news--all">
-      {% for post in collections.news %}
-      <article class="news-item">
-                {% if latest.data.image %}
-                    <div class="news-image">
-                    <img src="{{ latest.data.image }}" alt="Image">
-                    </div>
-                {% endif %}
-              <div class="news-content">
-                <div class="news-header">
-                  <h2>{{ latest.data.title }}</h2>
-                  
-                  {% if latest.data.category %}
-                      <p class="news-category">{{ latest.data.category }}</p>
-                  {% endif %}
-                </div>
+    <div class="news--all only-desktop">
+  {% assign latest = collections.news %}
+  {% for item in latest limit:3 %}
+    <article class="news-item">
+      {% if item.data.image %}
+        <div class="news-image">
+          <img src="{{ item.data.image }}" alt="Image">
+        </div>
+      {% endif %}
 
-                <div class="news-text">
-                    {{ latest.templateContent }}
-                </div>
-                
-                {% if latest.date %}
-                    <p class="news-date">{{ latest.date | readableDate }}</p>
-                {% endif %}
-              </div>
-      </article>
-      {% endfor %}
-    </div>
+      <div class="news-content">
+        <div class="news-header">
+          {% if item.date %}
+            <p class="news-date">{{ item.date | readableDate }}</p>
+          {% endif %}
+
+          <h2>{{ item.data.title }}</h2>
+
+          {% if item.data.category %}
+            <p class="news-category">{{ item.data.category }}</p>
+          {% endif %}
+        </div>
+
+        <div class="news-text">
+          {{ item.templateContent }}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
+</div>
 
   </main>
 
