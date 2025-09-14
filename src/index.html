@@ -416,11 +416,20 @@
     </footer>
 
     <script>
-    const params = new URLSearchParams(window.location.hash.slice(1));
+      const hash = window.location.hash.slice(1);
+      // najdi invite_token ručně
+      const match = hash.match(/invite_token=([^&]+)/);
+      if (match) {
+          const token = match[1];
+          window.location.href = `/admin/#invite_token=${token}`;
+      }
+      /*
+      const params = new URLSearchParams(window.location.hash.slice(1));
     if (params.has("invite_token")) {
         window.location.href = `/admin/#invite_token=${params.get("invite_token")}`;
-    }
+    }*/
     </script>
+
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 <script>
   const swiper = new Swiper('.swiper', {
