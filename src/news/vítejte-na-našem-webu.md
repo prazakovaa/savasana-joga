@@ -2,7 +2,7 @@
 title: Vítejte na našem webu.
 date: 2025-09-18T20:09:00.000+02:00
 image: /static/uploads/savasana2.jpg
-category: Important
+category: Blog
 ---
 Milí přátelé, vítejte na našich nových🌿**webových stránkách!**🌿
 
