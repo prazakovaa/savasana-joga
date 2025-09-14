@@ -30,6 +30,9 @@
 	.color-l{
 		color: var(--color-secondary)
 	}
+	.underline {
+		text-decoration: underline var(--color-primary);
+	}
 	.less{
 		color: black;
 		opacity: 0.55;

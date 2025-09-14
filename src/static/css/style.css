@@ -29,6 +29,23 @@
 		background-color: var(--color-light);
 	}
 
+	.scroll {
+		opacity: 0;
+		transform: translateY(20px);
+		transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+	}
+	.scroll2 {
+		transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+	}
+	.scroll3 {
+		transition: opacity 2.2s ease-in-out, transform 2.2s ease-in-out;
+	}
+
+	.scroll.visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
 	.page__content {
 		width: 80%;
 		max-width: 1400px;
@@ -317,7 +334,10 @@ border: 0 solid;
 		flex-direction: column;
 		height: 22vh;
 		justify-content: space-between;
-		align-items: center;
+		align-content: center;
+	}
+	.header-bottom .btn {
+		margin: 0 auto;
 	}
 	.header-logo-img{
 		width: 5rem;
@@ -435,18 +455,19 @@ border: 0 solid;
 	.asked-main {
 		display: flex;
 		justify-content: space-between;
-		gap: 3rem;
+		gap: 10%;
 	}
 	.questions {
 		width: 80%;
 	}
 	.contact-line{
-		border-left: 3px solid var(--color-primary);
+		width: 85%;
+		border-left: 2px solid var(--color-primary);
 		transition: border-left 0.2s ease-in-out;
 		padding-left: 1rem;
 	}
 	.contact-line:has(a:hover){
-		border-left: 5px solid var(--color-primary);
+		border-left: 6px solid var(--color-primary);
 	}
 	.footer-main .icon-link {
 		color: var(--color-light);
@@ -649,6 +670,9 @@ border: 0 solid;
 		margin: 1.5rem auto;
 		justify-content: space-between;
 		align-items: center;
+	}
+	.service-header h2 {
+		padding-bottom: 1rem;
 	}
 	.service-header a {
 		margin: 0;

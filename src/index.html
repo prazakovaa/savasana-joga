@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="/static/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
   <script src="static/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js"></script>
+
 </head>
 
 <body class="page">
@@ -46,13 +48,13 @@
    <!-- HEADER POZADÍ -->
    <div class="only-mobile">
    <div class="header__main main-m-other">
-    <div class="header-top">
+    <div class="header-top scroll">
       <p class="color">Vaše oblíbená jóga v srdci Jablonce.</p>
       <h1>ŠAVÁSANA
         <span class="fancy-text">studio</span>
       </h1>
     </div>
-    <div class="header-bottom">
+    <div class="header-bottom scroll2">
       <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">
         Rezervace</a>
       <a href="#main-page"><img src="static/img/icons/arrow.svg" style="opacity: 0.5;" alt="Ukazovací šipka"></a>
@@ -62,8 +64,8 @@
 
    <div class="only-desktop">
     <div class="header__main">
-      <h1>Jóga je více, <br> než jen fyzické cvičení.</h1>
-      <p class="color">Jsme rodinné jógové studio pro lidi se zájmem <br>o zdravý pohyb. Vaše oblíbená jóga v srdci Jablonce.</p>
+      <h1 class="scroll">Jóga je více, <br> než jen fyzické cvičení.</h1>
+      <p class="scroll scroll2 color">Jsme rodinné jógové studio pro lidi se zájmem <br>o zdravý pohyb. Vaše oblíbená jóga v srdci Jablonce.</p>
       <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">Rezervace</a>
     </div>
    </div>
@@ -126,7 +128,7 @@
             <div class="article-section">
             <img src="static/img/article1.avif" alt="Náhledová fotografie k článku">
             <div class="article-text">
-              <p class="article-description color">Naučný článek</p>
+              <p class="article-description color">Informativní článek</p>
               <div class="article-text-main">
                 <h3>Jóga jako prostor pro sebe</h3>
                 <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít vnitřní rovnováhu. Ať už hledáte...</p>
@@ -158,7 +160,7 @@
         </div>
 
         <div class="news-text">
-          {{ item.templateContent }}
+        {{ item.templateContent }}
         </div>
 
         {% if item.data.image %}
@@ -216,7 +218,7 @@
       <div class="article-section section-bigger">
             <img src="static/img/article2.avif" alt="Náhledová fotografie k článku">
             <div class="article-text">
-              <p class="article-description color">Naučný článek</p>
+              <p class="article-description color">Zajímavý článek</p>
               <div class="article-text-main">
               <h3>Naše cesta začala zde, vaše může taky</h3>
               <p class="less">Jsme rodinné jógové studio pro lidi se zájmem o zdravý pohyb, kteří stejně jako my vnímají, že jóga zdaleka není jen o cvičení ásan.</p>
@@ -240,11 +242,11 @@
     <section class="service">
       <div class="service-header">
       <h2>Na co se můžete těšit</h2>
-      <a class="icon-link reserve only-mobile" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ"><span class="color">Zde</span> najdete více o <span class="color">všech</span> lekcích</a>
+      <a class="icon-link reser only-mobile" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ"><span class="color underline">Zde</span> najdete více o <span class="color">všech</span> lekcích</a>
       <a href="#" class="btn btn--sign only-desktop">Všechny lekce</a>
     </div>
       <div class="service-cardss">
-        <div class="article service-card">
+        <div class="scroll article service-card">
             <div class="stars">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
@@ -259,7 +261,7 @@
               <a class="link" target="_blank" href="#">Více o této lekci →</a>
             </div>
         </div>
-        <div class="article service-card">
+        <div class="scroll scroll2 article service-card">
           <div class="stars">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
@@ -275,7 +277,7 @@
               <a class="link" target="_blank" href="#">Více o této lekci →</a>
             </div>
         </div>
-        <div class="article service-card">
+        <div class="scroll scroll3 article service-card">
           <div class="stars">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#fff" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
@@ -311,45 +313,52 @@
       <h2>Často kladené otázky</h2>
       <div class="asked-main">
       <div class="questions">
-        <div class="dropdown">
-          <button class="dropbtn">Je nějaké zvýhodněně vstupné?
-            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
-          </button>
-          <div class="dropdown-content">
-            <p>Ano! Nabízíme <a class="color "href="#">předplacené kurzy a dárkové poukazy</a>! Při platbě kreditem v našem <a class="color" href="https://rezervujeme.cz/savasana/">rezervačním systému</a> máte automaticky vstup vyhodnější.</p>
+
+
+          <div class="dropdown">
+            <div class="header">
+              <p>Je nějaké zvýhodněně vstupné?</p>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+              <p>Ano! Nabízíme <a class="color "href="/cenik/">předplacené kurzy a dárkové poukazy</a>! Při platbě kreditem v našem <a class="color" href="https://rezervujeme.cz/savasana/">rezervačním systému</a> máte automaticky vstup vyhodnější.</p>
+            </div>
           </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Kde zjistím obtížnosti lekcí?
-            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
-          </button>
-          <div class="dropdown-content">
-            <p>Obtížnosti jsou vypsány buď v <a class="color "href="#">popisu lekce</a> nebo je uvidíte při <a class="color "href="https://rezervujeme.cz/savasana/">rezervaci</a> lekce.</p>
+
+          <div class="dropdown">
+            <div class="header">
+              <p>Kde zjistím obtížnosti lekcí?</p>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+              <p>Obtížnosti jsou vypsány buď v <a class="color "href="/lekce/">popisu lekce</a> nebo je uvidíte při <a class="color "href="https://rezervujeme.cz/savasana/">rezervaci</a> lekce.</p>
           </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">Do kdy je možné se na lekci přihlásit?
-            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
-          </button>
-          <div class="dropdown-content">
-            <p>Přihlásit se na lekci je možné až do jejího začátku, pokud jsou volná místa. Pokud je obsazení zase naopak malé, je možné, že se lekce zruší, zpravidla 2h před jejím začátkem. V takovém případě obdžíte email.</p>
           </div>
-        </div>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Pokud nakonec nemůžu, jak se odhlásím?
-            <img src="static/img/icons/arrow-color.svg" alt="Šipka">
-          </button>
-          <div class="dropdown-content">
-            <p>Nejjednoduší rušení vašich lekcí je přes náš <a class="color" href="https://rezervujeme.cz/savasana/">rezervační systém</a> nejpozději 6h před danou lekcí.</p>
+
+          <div class="dropdown">
+            <div class="header">
+              <p>Do kdy je možné se na lekci přihlásit?</p>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+              <p>Přihlásit se na lekci je možné až do <span class="color">jejího začátku</span>, pokud jsou volná místa. Pokud je obsazení zase naopak malé, je možné, že se <span class="color">lekce zruší</span>, zpravidla 2h před jejím začátkem. V takovém případě obdžíte email.</p>
           </div>
-        </div>
+          </div>
+
+          <div class="dropdown">
+            <div class="header">
+              <p>Pokud nakonec nemůžu, jak se odhlásím?</p>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+              <p>Nejjednoduší rušení vašich lekcí je přes náš <a class="color" href="https://rezervujeme.cz/savasana/">rezervační systém</a> nejpozději 6h před danou lekcí.</p>
+          </div>
+          </div>
       </div>
       <div class="contact only-desktop">
         <h4>Také máte dotaz?</h4>
-        <div class="contact-line"><p>Zeptejte se konkrétního lektora vaší vysněné lekce, telefonní číslo zjístíte v sekci <a class="color" href="/pages/kontakt.html">“Kontakt”</a></p></div>
+        <div class="contact-line"><p>Zeptejte se konkrétního lektora vaší vysněné lekce! Telefonní číslo zjístíte v sekci <a class="color" href="/lektori/">“Lektoři”</a></p></div>
         <div class="contact-line"><p>Pro všeobecné dotazy můžete využít číslo: <a class="color" href="tel:+420606233421">+420 606 233 421</a></p></div>
-      </div>
       </div>
     </section>
 
@@ -426,6 +435,51 @@
     },
   });
 </script>
+<script>
+  document.querySelectorAll('.dropdown').forEach(dropdown => {
+    const btn = dropdown.querySelector('.dropbtn');
+    const content = dropdown.querySelector('.hidden-content');
+
+    btn.addEventListener('click', () => {
+      content.classList.toggle('show');
+      btn.classList.toggle('rotated');
+    });
+  });
+</script>
     <script src="static/js/hamburger.js"></script>
+    <script>
+  document.querySelectorAll('.news-text').forEach(block => {
+    const maxWords = 30;
+    const text = block.innerText.trim();
+    const words = text.split(/\s+/);
+
+    if (words.length > maxWords) {
+      const truncated = words.slice(0, maxWords).join(" ");
+      const readMoreLink = `<a href="/aktuality/" class="color"> Číst více</a>`;
+      block.innerHTML = truncated + "..." + readMoreLink;
+    }
+  });
+</script>
+
+<script>
+  const boxes = document.querySelectorAll('.scroll');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // odpozorovat, pokud chceme jednou
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+// přidat všechny boxy do observeru
+boxes.forEach(box => observer.observe(box));
+
+</script>
+
+
 </body>
 </html>
