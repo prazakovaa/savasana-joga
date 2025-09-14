@@ -87,8 +87,8 @@
             <img src="static/img/article1.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
             <div class="article-text">
               <h3>Jóga jako prostor pro sebe</h3>
-              <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít vnitřní rovnováhu. Ať už hledáte...</p>
-              <a class="link" target="_blank" href="pages/clanky/joga.html">Chci o józe vědět více</a>
+              <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít...</p>
+              <a class="link" target="_blank" href="/joga/">Chci o józe vědět více</a>
             </div>
           </div>
         </div>
@@ -97,10 +97,10 @@
             <img src="static/img/article2.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
             <div class="article-text">
               <h3>Naše cesta začala zde, vaše může taky</h3>
-              <p class="less">Jsme rodinné jógové studio pro lidi se zájmem o zdravý pohyb, kteří stejně jako my vnímají, že jóga zdaleka není jen o cvičení ásan.</p>
+              <p class="less">Jsme rodinné jógové studio pro lidi se zájmem o zdravý pohyb, kteří stejně jako my vnímají, že jóga...</p>
               <a class="icon-link map less" target="_blank" href="https://maps.app.goo.gl/caBHJndX2LATne9t5">Rooseveltova 2786/3, 466 01  JBC</a>
               <a class="icon-link facebook less" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Šavásána studio</a>
-              <a class="link" target="_blank" href="pages/onas.html">Chci o vás vědět více</a>
+              <a class="link" target="_blank" href="/onas/">Chci o vás vědět více</a>
             </div>
           </div>
         </div>
@@ -109,8 +109,8 @@
             <img src="static/img/article3.avif" class="image--full-responsive" alt="Náhledová fotografie k článku">
             <div class="article-text">
               <h3>Poprvé na podložce? Vše, co potřebujete vědět.</h3>
-              <p class="less">Na józe je krásné, že ji může začít praktikovat kdokoliv a v jakémkoliv věku. Forem jógy je totiž mnoho a každý si tu svou, která ho v daný moment na jeho cestě podpoří, může najít. Doporučujeme vyzkoušet různé...</p>
-              <a class="link" target="_blank" href="pages/clanky/zacatek.html">Číst celý článek</a>
+              <p class="less">Na józe je krásné, že ji může začít praktikovat kdokoliv a v jakémkoliv věku. Forem jógy je mnoho a každý si tu svou, která ho podpoří, může najít. Doporučujeme...</p>
+              <a class="link" target="_blank" href="/zacatek/">Číst celý článek</a>
             </div>
           </div>
         </div>
@@ -137,10 +137,13 @@
             </div>
           </div>
           </div>
+
     </div class="news">
-        <div class="news--latest only-mobile">
-        {% assign latest = collections.news | first %}
-        <article class="news-item">
+    <div class="only-mobile">
+        <div class="news--latest">
+  {% assign latest = collections.news %}
+  {% for item in latest limit:1 %}
+    <article class="news-item">
       <div class="news-profile">
         <img src="static/img/article2.avif" alt="Profilová fotografie, portrét">
         <div class="profile-name">
@@ -150,6 +153,7 @@
       </div>
 
       <div class="news-content">
+        <div class="news-info">
         <div class="news-header">
 
           <h2>{{ item.data.title }}</h2>
@@ -160,17 +164,19 @@
         </div>
 
         <div class="news-text">
-        {{ item.templateContent }}
+          {{ item.templateContent }}
         </div>
-
+      </div>
         {% if item.data.image %}
         <div class="news-image">
           <img src="{{ item.data.image }}" alt="Image">
         </div>
       {% endif %}
       </div>
-      </article>
-    </div>
+    </article>
+  {% endfor %}
+</div>
+</div>
 
     <div class="only-desktop">
         <div class="news--three">
@@ -211,7 +217,7 @@
 </div>
 </div>
 
-<a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na našem <span class="color"> Facebooku</span></a>
+<a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na <span class="color"> Facebooku</span></a>
     </section>
 
     <div class="only-desktop">
@@ -242,7 +248,7 @@
     <section class="service">
       <div class="service-header">
       <h2>Na co se můžete těšit</h2>
-      <a class="icon-link reser only-mobile" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ"><span class="color underline">Zde</span> najdete více o <span class="color">všech</span> lekcích</a>
+      <a class="icon-link reser only-mobile" target="_blank" href="/lekce/"><span class="color underline">Zde</span> najdete více o <span class="color">všech</span> lekcích</a>
       <a href="#" class="btn btn--sign only-desktop">Všechny lekce</a>
     </div>
       <div class="service-cardss">
@@ -391,8 +397,8 @@
                 <div class="import-links">
                     <p class="h2">Důležité lekce</p>
                     <a href="https://rezervujeme.cz/savasana/" class="icon-link reser">Rezervace lekcí</a>
-                    <a href="" class="icon-link service">Nabídka lekcí</a>
-                    <a href="" class="icon-link house">Pronájem studia</a>
+                    <a href="/lekce/" class="icon-link service">Nabídka lekcí</a>
+                    <a href="/cenik/#pronajem" class="icon-link house">Pronájem studia</a>
                 </div>
                 <div class="credit-links">
                     <p class="h2">Design webu</p>
