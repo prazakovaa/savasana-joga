@@ -601,6 +601,11 @@ a.btn.btn--sign.btn--white:hover{
 		font-size: 20px;
 	}
 
+	.page__content--news .icon-link {
+		margin: 1.7rem;
+		justify-self: center;
+	}
+
 	@media (min-width: 1080px) {
 		.footer__main {
 			max-width: 700px;

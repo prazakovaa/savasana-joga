@@ -56,48 +56,84 @@ permalink: /aktuality/index.html
 
 
 
-  <main>
+  <main class="page__content--news">
 
     <a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na <span class="color"> Facebooku</span></a>
 
-    /* FILTROVÁNÍ PODLE KATEGORIE ? */
-    /* omezit aktuality na 50/100 slov a pak "číst dále"*/
+    <div class="news-filter">
+      <p>Zobrazit: </p>
+      <div class="filter-pole">
+        <button data-filter="all">Vše</button>
+        <button data-filter="blog">Blog</button>
+        <button data-filter="otázky">Otázky</button>
+        <button data-filter="důležité">Důležité</button>
+        <button data-filter="jiné">Jiné</button>
+      </div>
+    </div>
 
       <div class="news--all">
         {% assign latest = collections.news %}
         {% for item in latest limit:20 %}
         <article class="news-item">
-          <div class="news-profile">
-            <img src="static/img/article2.avif" alt="Profilová fotografie, portrét">
-            <div class="profile-name">
-              <p class="name">Poslední aktuality</p>
-              <p class="less">@Šavásana studio</p>
-            </div>
-          </div>
 
           <div class="news-content">
             
             <div class="news-info">
-              <div class="news-header">
 
-                <h2>{{ item.data.title }}</h2>
+              {% assign months = "LED,ÚNO,BŘE,DUB,KVE,ČER,ČVC,SRP,ZÁŘ,ŘÍJ,LIS,PRO" | split: "," %}
 
-                {% if item.data.category %}
-                  <p class="news-category">{{ item.data.category }}</p>
-                {% endif %}
+              {% assign month_number = item.date | date: "%-m" %}
+              {% assign month_index = month_number | minus: 1 %}
+              {% assign month_name = months[month_index] %}
+
+              <p class="news-date">
+                <span class="month">{{ month_name }}</span>
+                <span class="day">{{ item.date | date: "%d" }}</span>
+              </p>
+
+              {% if item.data.image %}
+            <div class="news-image only-desktop">
+                <img src="{{ item.data.image }}" alt="Image">
+            </div>
+            {% endif %}
+
+              <div class="news-top">
+                <div class="news-header">
+                  <h2>{{ item.data.title }}</h2>
+
+                  {% if item.data.category %}
+                    <p class="news-category" data-cat="{{ item.data.category | downcase }}">
+                      {{ item.data.category }}
+                    </p>
+                  {% endif %}
+
+                </div>
+
+                <div class="news-text">
+                  <div class="news-full" style="display:none;">
+                    {{ item.templateContent }}
+                  </div>
+                  <div class="news-preview"></div>
+                  <div class="news-rest" style="display:none;"></div>
+                </div>
               </div>
+
+            </div>
 
               <div class="news-text">
-                {{ item.templateContent }}
+                  <div class="news-full" style="display:none;">
+                    {{ item.templateContent }}
+                  </div>
+                  <div class="news-preview" style="display:none;"></div>
+                  <div class="news-rest"></div>
               </div>
-          </div>
 
           {% if item.data.image %}
-            <div class="news-image">
+            <div class="news-image only-mobile">
               <img src="{{ item.data.image }}" alt="Image">
             </div>
             {% endif %}
-            
+            </div>
           </div>
         </article>
         {% endfor %}
@@ -154,5 +190,49 @@ permalink: /aktuality/index.html
     </footer>
 
   <script src="../static/js/hamburger.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".news-text").forEach(function (el) {
+    // najdeme textový obsah z item.templateContent
+    let fullText = el.textContent.trim();
+    
+    // rozdělíme na slova
+    let words = fullText.split(/\s+/);
+
+    // nastavíš si, po kolika slovech to má rozdělit
+    let splitIndex = 90; 
+
+    let preview = words.slice(0, splitIndex).join(" ");
+    let rest = words.slice(splitIndex).join(" ");
+
+    el.querySelector(".news-preview").textContent = preview;
+    el.querySelector(".news-rest").textContent = rest;
+  });
+});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".filter-pole button");
+  const articles = document.querySelectorAll(".news-item");
+
+  buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const filter = btn.dataset.filter;
+
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        articles.forEach(article => {
+          const category = article.querySelector(".news-category").textContent.trim().toLowerCase();
+          if (filter === "all" || category === filter) {
+            article.style.display = "";
+          } else {
+            article.style.display = "none";
+          }
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>
