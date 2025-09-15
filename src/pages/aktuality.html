@@ -58,36 +58,50 @@ permalink: /aktuality/index.html
 
   <main>
 
-    <div class="news--all only-desktop">
-  {% assign latest = collections.news %}
-  {% for item in latest limit:3 %}
-    <article class="news-item">
-      {% if item.data.image %}
-        <div class="news-image">
-          <img src="{{ item.data.image }}" alt="Image">
-        </div>
-      {% endif %}
+    <a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na <span class="color"> Facebooku</span></a>
 
-      <div class="news-content">
-        <div class="news-header">
-          {% if item.date %}
-            <p class="news-date">{{ item.date | readableDate }}</p>
-          {% endif %}
+    /* FILTROVÁNÍ PODLE KATEGORIE ? */
+    /* omezit aktuality na 50/100 slov a pak "číst dále"*/
 
-          <h2>{{ item.data.title }}</h2>
+      <div class="news--all">
+        {% assign latest = collections.news %}
+        {% for item in latest limit:20 %}
+        <article class="news-item">
+          <div class="news-profile">
+            <img src="static/img/article2.avif" alt="Profilová fotografie, portrét">
+            <div class="profile-name">
+              <p class="name">Poslední aktuality</p>
+              <p class="less">@Šavásana studio</p>
+            </div>
+          </div>
 
-          {% if item.data.category %}
-            <p class="news-category">{{ item.data.category }}</p>
-          {% endif %}
-        </div>
+          <div class="news-content">
+            
+            <div class="news-info">
+              <div class="news-header">
 
-        <div class="news-text">
-          {{ item.templateContent }}
-        </div>
+                <h2>{{ item.data.title }}</h2>
+
+                {% if item.data.category %}
+                  <p class="news-category">{{ item.data.category }}</p>
+                {% endif %}
+              </div>
+
+              <div class="news-text">
+                {{ item.templateContent }}
+              </div>
+          </div>
+
+          {% if item.data.image %}
+            <div class="news-image">
+              <img src="{{ item.data.image }}" alt="Image">
+            </div>
+            {% endif %}
+            
+          </div>
+        </article>
+        {% endfor %}
       </div>
-    </article>
-  {% endfor %}
-</div>
 
   </main>
 
