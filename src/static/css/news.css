@@ -32,6 +32,13 @@
     margin: 0.2rem;
   }
 
+  .news-category {
+    background-color: lightcoral; /*každá kategorie má speciální barvičku*/
+    border: 1px solid darkred;
+    padding: 0.2em 0.5em;
+    border-radius: 30px;
+  }
+
   .news--three .news-item  {
     border-radius: 22px;
     width: 32%;
@@ -63,5 +70,51 @@
     font-size: 0.8rem;
     opacity: 54%;
     margin: 0;
+  }
+
+  .news--all {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .news--all .news-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    border: 1px solid var(--color-primary);
+    width: 90%;
+  }
+
+  .news-info {
+    padding: 1rem;
+  }
+
+  .news--all .news-image {
+    max-height: 250px;
+    object-fit: cover;
+  }
+
+  
+
+  @media (min-width: 1080px) {
+  .news--all .news-item {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .news--all .news-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .news--all .news-image {
+    max-height: auto;
+    width: 25%;
+    object-fit: cover;
+  }
   }
 }
