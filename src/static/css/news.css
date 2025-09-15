@@ -53,14 +53,14 @@
 
   .news-category[data-cat="otázky"], .filter-pole button[data-filter="otázky"].active {
     background-color: rgb(222, 236, 236);
-    border: 1px solid rgb(0, 87, 87);
-    color: darkcyan;
+    border: 1px solid rgb(0, 127, 127);
+    color: rgb(0, 114, 114);
   }
 
   .news-category[data-cat="blog"], .filter-pole button[data-filter="blog"].active {
-    background-color: rgb(255, 249, 234);
-    border: 1px solid rgb(106, 77, 5);
-    color: darkgoldenrod;
+    background-color: rgb(248, 220, 188);
+    border: 1px solid rgb(187, 136, 6);
+    color: rgb(131, 79, 5);
   }
 
   .filter-pole button {
@@ -115,6 +115,7 @@
     background-color: white;
     border: 1px solid var(--color-primary);
     width: 90%;
+    margin: 1.5rem 0;
   }
 
   .news--all .news-info  {
@@ -131,7 +132,7 @@
   }
 
   .news--all .news-image img {
-    max-height: 300px;
+    max-height: 320px;
     width: 100%;
     object-fit: cover;
   }
@@ -176,6 +177,21 @@
     margin-right: 10%;
   }
 
+  .news-rest {
+    padding-right: 1rem;
+    justify-self: end;
+    width: 75%;
+    margin-bottom: 1rem;
+  }
+
+  .news-file a {
+    font-size: 1.3rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-self: end;
+    margin-right: 15%;
+  }
+
   .filter-pole button {
     margin: 0;
     width: 85px;
@@ -184,11 +200,16 @@
     display: inline-block;
   }
 
+  button {
+    border: 1px solid var(--color-primary);
+    cursor: pointer;
+  }
+
 
   @media (min-width: 1080px) {
   .news--all .news-item {
     flex-direction: row;
-    gap: 2rem;
+    gap: 1.5rem;
     width: 80%;
   }
 
@@ -197,15 +218,16 @@
   }
 
   .news--all .news-image {
-    margin: 0;
-    height: 300px;
-    width: 25%;
+    margin: 0.5rem 0 0 0;
+    height: 320px;
+    width: 30%;
     object-fit: cover;
   }
 
   .news-rest {
-    margin: 0 auto;
+    margin: 0 auto 2rem auto;
     width: 80%;
+    padding-right: 0;
   }
   }
 }
