@@ -17,4 +17,4 @@ collections:
       - { label: "Body", name: "body", widget: "markdown", required: true }
       - { label: "Image", name: "image", widget: "image", required: false } 
       - { label: "File", name: "file", widget: "file", required: false }
-      - { label: "Category", name: "category", widget: "select", required: true, options: ["Důležité", "Otázky", "Blog", "Jiné"] }
+      - { label: "Category", name: "category", widget: "select", required: true, options: ["Důležité", "Akce", "Blog", "Jiné"] }

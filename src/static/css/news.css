@@ -51,7 +51,7 @@
     color: darkblue;
   }
 
-  .news-category[data-cat="otázky"], .filter-pole button[data-filter="otázky"].active {
+  .news-category[data-cat="akce"], .filter-pole button[data-filter="akce"].active {
     background-color: rgb(222, 236, 236);
     border: 1px solid rgb(0, 127, 127);
     color: rgb(0, 114, 114);
