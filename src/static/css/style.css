@@ -282,7 +282,7 @@ a.btn.btn--sign.btn--white:hover{
 		grid-column: 3 / span 1;
 		grid-row: 2 / span 1;
 	}
-	.page__content--service h2 {
+	.page__content--service h3 {
 		padding: 0 0 0 0.3rem;
 		font-family: "Manrope", Helvetica, Arial, sans-serif;
 		font-weight: 500;
@@ -678,6 +678,12 @@ a.btn.btn--sign.btn--white:hover{
 	.page__content--service {
 		width: 80%;
 		margin: 2rem auto;
+	}
+
+	.page__content--service h2 {
+		font-size: 1.2rem;
+		color: var(--color-primary);
+
 	}
 
 	.service-description {
