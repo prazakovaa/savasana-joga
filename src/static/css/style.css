@@ -228,6 +228,9 @@ a.btn.btn--sign.btn--white:hover{
 	.icon-link.clock::before {
 		background-image: url("../img/icons/clock.svg");
 	}
+	.icon-link.clock::before {
+		background-image: url("../img/icons/money.svg");
+	}
 	/* LIGHTGALLERY */
 	.thumbnails {
     height: 150px;
@@ -690,6 +693,14 @@ a.btn.btn--sign.btn--white:hover{
 		margin-left: 1rem;
 	}
 
+	.contact {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+		gap: 2rem;
+		background-color: #fff;
+	}
+
 	@media (min-width: 1080px) {
 		.footer__main {
 			max-width: 700px;
@@ -820,6 +831,12 @@ a.btn.btn--sign.btn--white:hover{
 		.place4 {
 			grid-column: 4 / span 1;
 			grid-row: 1 / span 1;
+		}
+		.contact {
+			flex-direction: row;
+		}
+		.contact-links {
+			width: 70%;
 		}
 }
 }
