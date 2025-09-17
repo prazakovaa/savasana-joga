@@ -77,8 +77,6 @@ permalink: /aktuality/index.html
         <article class="news-item">
 
           <div class="news-content">
-            
-            <div class="news-info">
 
               {% assign months = "LED,ÚNO,BŘE,DUB,KVE,ČER,ČVC,SRP,ZÁŘ,ŘÍJ,LIS,PRO" | split: "," %}
 
@@ -90,12 +88,6 @@ permalink: /aktuality/index.html
                 <span class="month">{{ month_name }}</span>
                 <span class="day">{{ item.date | date: "%d" }}</span>
               </p>
-
-              {% if item.data.image %}
-            <div class="news-image only-desktop">
-                <img src="{{ item.data.image }}" alt="Image">
-            </div>
-            {% endif %}
 
               <div class="news-top">
                 <div class="news-header">
@@ -118,7 +110,12 @@ permalink: /aktuality/index.html
                 </div>
               </div>
 
+              {% if item.data.image %}
+            <div class="news-image only-desktop">
+                <img src="{{ item.data.image }}" alt="Image">
             </div>
+            {% endif %}
+
 
               <div class="news-text">
                   <div class="news-full" style="display:none;">
@@ -127,6 +124,8 @@ permalink: /aktuality/index.html
                   <div class="news-preview" style="display:none;"></div>
                   <div class="news-rest"></div>
               </div>
+              
+          </div>
 
               {% if item.data.file %}
                 <p class="news-file">
@@ -139,8 +138,6 @@ permalink: /aktuality/index.html
               <img src="{{ item.data.image }}" alt="Image">
             </div>
             {% endif %}
-            </div>
-          </div>
         </article>
         {% endfor %}
       </div>
@@ -206,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let words = fullText.split(/\s+/);
 
     // nastavíš si, po kolika slovech to má rozdělit
-    let splitIndex = 90; 
+    let splitIndex = 150; 
 
     let preview = words.slice(0, splitIndex).join(" ");
     let rest = words.slice(splitIndex).join(" ");

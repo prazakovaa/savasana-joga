@@ -420,6 +420,7 @@ a.btn.btn--sign.btn--white:hover{
 		margin: 1rem auto;
 		width: max-content;
 	}
+	
 	.icon-link span{
 		padding: 0 0.3rem;
 	}
@@ -530,6 +531,9 @@ a.btn.btn--sign.btn--white:hover{
 	}
 	.questions {
 		width: 80%;
+	}
+	.contact-links .icon-link {
+		opacity: 100%;
 	}
 	.contact-line{
 		width: 85%;
@@ -693,7 +697,7 @@ a.btn.btn--sign.btn--white:hover{
 		margin-left: 1rem;
 	}
 
-	.contact {
+	.contact-map {
 		display: flex;
 		flex-direction: column;
 		padding: 1rem;
@@ -832,8 +836,9 @@ a.btn.btn--sign.btn--white:hover{
 			grid-column: 4 / span 1;
 			grid-row: 1 / span 1;
 		}
-		.contact {
+		.contact-map {
 			flex-direction: row;
+			width: 95%;
 		}
 		.contact-links {
 			width: 70%;
