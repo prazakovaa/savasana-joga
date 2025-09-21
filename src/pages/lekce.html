@@ -41,8 +41,8 @@ permalink: /lekce/index.html
         <li class="menu menu--active"><a href="../lekce">Lekce</a></li>
         <li class="menu"><a href="../cenik">Ceník</a></li>
         <li class="menu"><a href="../aktuality">Aktuality</a></li>
-        <li class="menu only-mobile"><a href="../onas">O nás</a></li>
         <li class="menu"><a href="../lektori">Lektoři</a></li>
+        <li class="menu"><a href="../kontakt">Kontakt</a></li>
         <li class="only-desktop"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
         </div>
         </menu>
@@ -58,17 +58,43 @@ permalink: /lekce/index.html
   </header>
 
   <main class="page__content--service">
+
+
+    <div class="filters">
+      <label>Lektor:
+        <select id="filter-lektor">
+          <option value="">Všichni</option>
+          <option value="Bursová">Zuzana Bursová</option>
+          <option value="Huk">Petr Huk</option>
+          <option value="Huková">Jana Huková</option>
+          <option value="Handlířová">Petra Handlířová</option>
+          <option value="Burianová">Petra Burianová</option>
+        </select>
+      </label>
+
+      <label>Obtížnost:
+        <select id="filter-obtiznost">
+          <option value="">Vše</option>
+          <option value="1">1 / 5</option>
+          <option value="2">2 / 5</option>
+          <option value="3">3 / 5</option>
+          <option value="4">4 / 5</option>
+          <option value="5">5 / 5</option>
+        </select>
+      </label>
+    </div>
+
     <section class="services">
 
       <h2>Pravidelné lekce</h2>
 
-          <div class="dropdown">
+          <div class="dropdown" data-lektor="Huková, Huk" data-obtiznost="3">
             <div class="header">
               <h3>Fit jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
             </div>
             <div class="hidden-content">
-                <p class="icon-link person">Petr Huk</p>
+                <p class="icon-link person">Jana Huková, Petr Huk</p>
                 <p class="icon-link star">Obtížnost: 3 / 5</p>
                 <p class="icon-link clock">ČT: 8:30 - 9:45</p>
                 <p class="icon-link pen">Fit jóga vás protáhne a zahřeje. Je to příjemná kombinace relaxace se sadou obtížnějších pozic.</p>
@@ -84,13 +110,13 @@ permalink: /lekce/index.html
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Huková, Huk" data-obtiznost="2">
             <div class="header">
               <h3>Ranní jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
             </div>
             <div class="hidden-content">
-                <p class="icon-link person">Jana Huková</p>
+                <p class="icon-link person">Jana Huková, Petr Huk</p>
                 <p class="icon-link star">Obtížnost: 2 / 5</p>
                 <p class="icon-link clock">ÚT: 8:30 - 9:45</p>
                 <p class="icon-link pen">Probudíte sebe i své tělo. Pohybem ale i díky dechu. Lekce je jemnější, spíše protahovací s trochou posílování.</p>
@@ -106,7 +132,7 @@ permalink: /lekce/index.html
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Handlířová, Huk" data-obtiznost="2">
             <div class="header">
               <h3>Dobré ráno s jógou</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
@@ -128,7 +154,7 @@ permalink: /lekce/index.html
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Huk" data-obtiznost="3">
             <div class="header">
               <h3>Jóga pro zdravá záda</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
@@ -151,7 +177,7 @@ Na józe pro zdravá záda se povětšinou setkáte spíše se základními vari
 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Huk" data-obtiznost="4">
             <div class="header">
               <h3>Core jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
@@ -176,7 +202,7 @@ CORE znamená svaly středu těla. Není to zdaleka jen břicho nebo přímé a 
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Huková" data-obtiznost="2">
             <div class="header">
               <h3>Jóga pro ženy</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
@@ -186,7 +212,7 @@ CORE znamená svaly středu těla. Není to zdaleka jen břicho nebo přímé a 
                 <p class="icon-link star">Obtížnost: 2 / 5</p>
                 <p class="icon-link clock">NE: 18:30 - 20:00</p>
                 <p class="icon-link pen">Jógová praxe pro ženy, jejíž fyzická intenzita se v průběhu roku mění dle ročních období a s nimi souvisejících principů ajurvédy.</p>
-                <div class="service__gallery" id="lightgallery5">
+                <div class="service__gallery" id="lightgallery6">
 					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
                     <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
                     <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
@@ -205,17 +231,17 @@ V zimě si bereme za vzor přírodu, která uléhá k zimnímu spánku, nevysilu
                 </div>
             </div>
         </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Huková, Burianová" data-obtiznost="">
             <div class="header">
-              <h3>Restorativní jóga</h3>
+              <h3>Jemná vinyasa jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
             </div>
             <div class="hidden-content">
-                <p class="icon-link person">Jana Huková</p>
-                <p class="icon-link star">Obtížnost: 1 / 5</p>
-                <p class="icon-link clock">ÚT: 19:45 - 21:15</p>
-                <p class="icon-link pen">Velmi jemná, fyzicky nenáročná jógová praxe, při které si odpočinete, ale zároveň do hloubky uvolníte tělo.</p>
-                <div class="service__gallery" id="lightgallery5">
+                <p class="icon-link person">Jana Huková, Petra Burianová</p>
+                <p class="icon-link star">Obtížnost: </p>
+                <p class="icon-link clock"></p>
+                <p class="icon-link pen">Popis se bude měnit. Fit jóga vás protáhne a zahřeje. Je to příjemná kombinace relaxace se sadou obtížnějších pozic.</p>
+                <div class="service__gallery" id="lightgallery11">
 					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
                     <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
                     <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
@@ -223,46 +249,21 @@ V zimě si bereme za vzor přírodu, která uléhá k zimnímu spánku, nevysilu
 				</div>
                 <div class="service-description">
                     <p class="color">Podrobný popis lekce:</p>
-                    <p>Velmi jemná, fyzicky nenáročná jógová praxe, vhodná i pro úplné začátečníky nebo také po dlouhé nemoci. Na lekci zregenerujete a dobijete vnitřní baterky. Zároveň také do hloubky uvolníte tělo. Netýká se to pouze uvolnění svalů. V pozicích setrváváte delší dobu (minimálně pět minut), proto se uvolní nejen svaly ale i hluboké pojivové tkáně, vazy, šlachy a klouby. <br><br>
-Restorativní pozice jsou příjemné; vaše tělo je v nich vypodložené bolstery, jóga bloky či dekami. Můžete tak z těla propustit veškeré napětí a ono se po chvíli krásně uvolní. Pravidelná praxe zlepšuje kvalitu spánku, ulevuje od dýchacích obtíží a mírných forem deprese. Pocit bezpečí, který je pro uvolnění nezbytný, a atmosféru celé lekce umocňují zvuky různých léčivých nástrojů a také vybrané aroma oleje.<br><br>
-Každá lekce je zaměřena na jiné téma. Sledujte prosím Události na našem FB.
-</p>
+                    <p> Popis se bude měnit. Ráno dělá den! Pokud ráno chcete rozproudit v těle energii, s touto lekcí začnete svůj den parádně :). V úvodní části se zpřítomníte a naladíte sami na sebe. Přípravné cviky vám postupně rozhýbají tělo. Následují Pozdravy slunce, které vás zahřejí a připraví na fyzicky lehce náročnější sekvenci pozic. Díky ní posílíte svaly nohou, protáhnete kyčle a ramena. Následují pozice na protažení těla a relaxace. Cviky zaměřené na posílení středu těla jsou samozřejmostí :D, stejně jako vědomá práce s dechem. Fit jóga vás protáhne a zahřeje a po závěrečné relaxaci budete odcházet spokojeni a  příjemně naladěni na nový den. </p>
                 </div>
             </div>
         </div>
-        <div class="dropdown">
-            <div class="header">
-              <h3>Yin jóga</h3>
-              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
-            </div>
-            <div class="hidden-content">
-                <p class="icon-link person">Zuzana Bursová</p>
-                <p class="icon-link star">Obtížnost: 1 / 5</p>
-                <p class="icon-link clock">SO: 18:00 - 20:00</p>
-                <p class="icon-link pen">Yin jóga je klidný styl jógy, který se zaměřuje na dlouhé setrvávání v pozicích. Pro potřebné uvolnění těla.</p>
-                <div class="service__gallery" id="lightgallery5">
-					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
-                    <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
-                    <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
-                    <a class="gallery__item place4" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
-				</div>
-                <div class="service-description">
-                    <p class="color">Podrobný popis lekce:</p>
-                    <p>Yin jóga je klidný styl jógy, který se zaměřuje na dlouhé setrvávání v pozicích, cca 3 až 5 minut. Díky tomu se uvolňují hluboké pojivové tkáně, vazy, šlachy a klouby. Tato praxe zlepšuje flexibilitu a podporuje vnitřní klid. </p>
-                </div>
-            </div>
-        </div>
-        <div class="dropdown">
+        <div class="dropdown"  data-lektor="Bursová" data-obtiznost="2">
             <div class="header">
               <h3>Hatha jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
             </div>
             <div class="hidden-content">
-                <p class="icon-link person">Jana Huková</p>
+                <p class="icon-link person">Zuzana Bursová</p>
                 <p class="icon-link star">Obtížnost: 2 / 5</p>
                 <p class="icon-link clock">ČT: 16:45 - 18:00</p>
                 <p class="icon-link pen">Odpolední jemná praxe. Po lekci se budete cítit jako noví.</p>
-                <div class="service__gallery" id="lightgallery5">
+                <div class="service__gallery" id="lightgallery7">
 					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
                     <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
                     <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
@@ -275,9 +276,56 @@ Každá lekce je zaměřena na jiné téma. Sledujte prosím Události na našem
             </div>
         </div>
 
-        <h2>Speciální nabídky</h2>
-
-        <div class="dropdown">
+        <h2>Speciální lekce</h2>
+        <div class="dropdown"  data-lektor="Huková" data-obtiznost="1">
+            <div class="header">
+              <h3>Restorativní jóga</h3>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+                <p class="icon-link person">Jana Huková</p>
+                <p class="icon-link star">Obtížnost: 1 / 5</p>
+                <p class="icon-link clock">ÚT: 19:45 - 21:15</p>
+                <p class="icon-link pen">Velmi jemná, fyzicky nenáročná jógová praxe, při které si odpočinete, ale zároveň do hloubky uvolníte tělo.</p>
+                <div class="service__gallery" id="lightgallery8">
+					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
+                    <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                    <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                    <a class="gallery__item place4" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+				</div>
+                <div class="service-description">
+                    <p class="color">Podrobný popis lekce:</p>
+                    <p>Velmi jemná, fyzicky nenáročná jógová praxe, vhodná i pro úplné začátečníky nebo také po dlouhé nemoci. Na lekci zregenerujete a dobijete vnitřní baterky. Zároveň také do hloubky uvolníte tělo. Netýká se to pouze uvolnění svalů. V pozicích setrváváte delší dobu (minimálně pět minut), proto se uvolní nejen svaly ale i hluboké pojivové tkáně, vazy, šlachy a klouby. <br><br>
+                    Restorativní pozice jsou příjemné; vaše tělo je v nich vypodložené bolstery, jóga bloky či dekami. Můžete tak z těla propustit veškeré napětí a ono se po chvíli krásně uvolní. Pravidelná praxe zlepšuje kvalitu spánku, ulevuje od dýchacích obtíží a mírných forem deprese. Pocit bezpečí, který je pro uvolnění nezbytný, a atmosféru celé lekce umocňují zvuky různých léčivých nástrojů a také vybrané aroma oleje.<br><br>
+                    Každá lekce je zaměřena na jiné téma. Sledujte prosím Události na našem FB.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown"  data-lektor="Bursová" data-obtiznost="1">
+            <div class="header">
+              <h3>Yin jóga</h3>
+              <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
+            </div>
+            <div class="hidden-content">
+                <p class="icon-link person">Zuzana Bursová</p>
+                <p class="icon-link star">Obtížnost: 1 / 5</p>
+                <p class="icon-link clock">SO: 18:00 - 20:00</p>
+                <p class="icon-link pen">Yin jóga je klidný styl jógy, který se zaměřuje na dlouhé setrvávání v pozicích. Pro potřebné uvolnění těla.</p>
+                <div class="service__gallery" id="lightgallery9">
+					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
+                    <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                    <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                    <a class="gallery__item place4" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+				</div>
+                <div class="service-description">
+                    <p class="color">Podrobný popis lekce:</p>
+                    <p>Yin jóga je klidný styl jógy, který se zaměřuje na dlouhé setrvávání v pozicích, cca 3 až 5 minut. Díky tomu se uvolňují hluboké pojivové tkáně, vazy, šlachy a klouby. Tato praxe zlepšuje flexibilitu a podporuje vnitřní klid. </p>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown"
+              data-lektor="Huková, Huk">
             <div class="header">
               <h3>Individuální jóga</h3>
               <svg class="dropbtn" xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24"><path fill="none" stroke="#AD4600" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2" d="m6 9l6 6l6-6"/></svg>
@@ -286,8 +334,8 @@ Každá lekce je zaměřena na jiné téma. Sledujte prosím Události na našem
                 <p class="icon-link person">Jana Huková, Petr Huk</p>
                 <p class="icon-link star">Obtížnost: Podle domluvy</p>
                 <p class="icon-link clock">Čas: Podle domluvy</p>
-                <a href="tel:+420606233421" class="icon-link phone">Domluva na čísle: 606 233 421</p>
-                <div class="service__gallery" id="lightgallery5">
+                <a href="tel:+420606233421" class="icon-link phone">Domluva na čísle: 606 233 421</a>
+                <div class="service__gallery" id="lightgallery10">
 					<a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
                     <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
                     <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
@@ -342,7 +390,7 @@ Nebo máte specifický zdravotní problém a potřebujete se naučit modifikace 
             <div class="only-desktop">
             <div class="footer__links">
                 <div class="import-links">
-                    <p class="h2">Důležité lekce</p>
+                    <p class="h2">Důležité odkazy</p>
                     <a href="https://rezervujeme.cz/savasana/" class="icon-link reser">Rezervace lekcí</a>
                     <a href="../lekce" class="icon-link service">Nabídka lekcí</a>
                     <a href="../cenik/#pronajem" class="icon-link house">Pronájem studia</a>
@@ -402,42 +450,83 @@ Nebo máte specifický zdravotní problém a potřebujete se naučit modifikace 
       speed: 500,
     });
     const gallery4 = document.getElementById("lightgallery4");
-    lightGallery(gallery3, {
+    lightGallery(gallery4, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
     const gallery5 = document.getElementById("lightgallery5");
-    lightGallery(gallery3, {
+    lightGallery(gallery5, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
     const gallery6 = document.getElementById("lightgallery6");
-    lightGallery(gallery3, {
+    lightGallery(gallery6, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
     const gallery7 = document.getElementById("lightgallery7");
-    lightGallery(gallery3, {
+    lightGallery(gallery7, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
     const gallery8 = document.getElementById("lightgallery8");
-    lightGallery(gallery3, {
+    lightGallery(gallery8, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
     const gallery9 = document.getElementById("lightgallery9");
-    lightGallery(gallery3, {
+    lightGallery(gallery9, {
+      selector: "a",
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+    });
+    const gallery10 = document.getElementById("lightgallery10");
+    lightGallery(gallery10, {
+      selector: "a",
+      plugins: [lgZoom, lgThumbnail],
+      speed: 500,
+    });
+    const gallery11 = document.getElementById("lightgallery11");
+    lightGallery(gallery11, {
       selector: "a",
       plugins: [lgZoom, lgThumbnail],
       speed: 500,
     });
   });
+</script>
+<script>
+const lektorFilter = document.getElementById("filter-lektor");
+const obtiznostFilter = document.getElementById("filter-obtiznost");
+const lessons = document.querySelectorAll(".dropdown");
+
+function filterLessons() {
+  const selectedLektor = lektorFilter.value.trim();
+  const obtiznost = obtiznostFilter.value;
+
+  lessons.forEach(lesson => {
+    const lessonLektori = lesson.dataset.lektor
+      .split(",")
+      .map(l => l.trim());
+    const lessonObtiznost = lesson.dataset.obtiznost;
+
+    const matchLektor = !selectedLektor || lessonLektori.includes(selectedLektor);
+    const matchObtiznost = !obtiznost || lessonObtiznost === obtiznost;
+
+    if (matchLektor && matchObtiznost) {
+      lesson.style.display = "";
+    } else {
+      lesson.style.display = "none";
+    }
+  });
+}
+
+lektorFilter.addEventListener("change", filterLessons);
+obtiznostFilter.addEventListener("change", filterLessons);
 </script>
 </body>
 </html>

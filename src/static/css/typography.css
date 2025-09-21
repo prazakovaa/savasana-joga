@@ -29,6 +29,9 @@
 	.color{
 		color: var(--color-primary);
 	}
+	.color-b{
+		font-weight: 600;
+	}
 	.color-l{
 		color: var(--color-secondary)
 	}
