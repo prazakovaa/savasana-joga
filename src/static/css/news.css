@@ -206,7 +206,7 @@
     display: inline-block;
   }
 
-  button {
+  .page__content--service button {
     border: 1px solid var(--color-primary);
     cursor: pointer;
   }
