@@ -743,6 +743,29 @@ option {
 		border-color: #AD4600;
 	}
 
+	.page__content--rules {
+		margin: 2rem auto;
+		width: 85%;
+	}
+
+	.rule {
+		margin: 2rem 0;
+	}
+
+	.rule-name {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.rule-name h2 {
+		padding: 0;
+	}
+
+	.rule p{
+		margin: 0 1rem;
+	}
+
 	#onas {
 		width: 85%;
 		display: grid;
@@ -999,7 +1022,7 @@ option {
 
 	#onas {
 		width: 80%;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 2fr 1fr;
 	}
 
 	#onas h2 {
