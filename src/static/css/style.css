@@ -329,6 +329,33 @@ a.btn.btn--sign.btn--white:hover{
   padding-left: 5px; /* text se mírně posune doprava */
 }
 
+.filters {
+	display: flex;
+	flex-direction: column;
+	width: 250px;
+}
+
+.filters label {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1rem 0;
+}
+
+.filters h2 {
+	margin: 0;
+}
+
+#filter-lektor, #filter-obtiznost {
+	padding: .4rem;
+	border: 1px solid var(--color-primary);
+	width: 160px;
+}
+
+option {
+	padding: 0.3rem;
+}
+
 }
 @layer design {
 
@@ -712,8 +739,47 @@ a.btn.btn--sign.btn--white:hover{
 		background-color: #fff;
 	}
 
+	.news-filter button {
+		border-color: #AD4600;
+	}
+
+	#onas {
+		width: 85%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+
+	#onas h2 {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	#onas .first {
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+
+	#onas img {
+		width: 100%;
+		height: auto;
+		max-height: 400px;
+		object-fit: cover;
+		grid-column: 1 / span 1;
+		grid-row: 3 / span 1;
+	}
+
+	#onas .second {
+		grid-column: 1 / span 1;
+		grid-row: 4 / span 1;
+	}
+
 	.page__content--teachers {
 		margin: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
 	}
 
 	.teachers {
@@ -930,5 +996,38 @@ a.btn.btn--sign.btn--white:hover{
 		.teacher-card {
 			width: 30%;
 		}
+
+	#onas {
+		width: 80%;
+		grid-template-columns: 3fr 1fr;
+	}
+
+	#onas h2 {
+		grid-column: 1 / span 1;
+		grid-row: 1 / span 1;
+	}
+
+	#onas .first {
+		grid-column: 1 / span 1;
+		grid-row: 2 / span 1;
+	}
+
+	#onas img {
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
+	}
+
+	#onas .second {
+		grid-column: 1 / span 2;
+		grid-row: 3 / span 1;
+	}
+	#onas .only-desktop {
+		grid-column: 1 / span 2;
+		grid-row: 4 / span 1;
+	}
+	#onas .only-desktop img {
+		height: 100%;
+	}
+
 }
 }

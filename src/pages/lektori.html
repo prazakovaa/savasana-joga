@@ -105,7 +105,23 @@ permalink: /lektori/index.html
         </div>
 
         <div id="onas">
-            <h1>lololol</h1>
+            <h2 class="color">Něco o nás.</h2>
+            <div class="first">
+                první část textu, o vzniku:)
+            </div>
+            <img src="../static/img/article2.avif" alt="Společná fotografie lektorů">
+            <div class="second">
+                druhá část, více o vzniku studia
+            </div>
+            <div class="only-desktop">
+                <div class="service__gallery" id="lightgallery1">
+                        <a class="gallery__item place1" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a> 
+                        <a class="gallery__item place2" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                        <a class="gallery__item place3" href="/static/img/article1.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                        <a class="gallery__item place4" href="/static/img/article2.avif"><img alt="Jógové pozice" class="image--full-responsive" src="/static/img/article1.avif"></a>
+                </div>
+            </div>
+
         </div>
 
     </main>
@@ -159,5 +175,15 @@ permalink: /lektori/index.html
     </footer>
 
     <script src="../static/js/hamburger.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const gallery1 = document.getElementById("lightgallery1");
+            lightGallery(gallery1, {
+            selector: "a",
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            });
+        })
+    </script>
     </body>
     </html>
