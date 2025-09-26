@@ -758,7 +758,7 @@ option {
 		gap: 1rem;
 	}
 
-	.rule-name h2 {
+	.rule-name h2, .prizes h2 {
 		padding: 0;
 	}
 
