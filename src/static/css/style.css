@@ -870,6 +870,34 @@ option {
     transform: translateY(0);
   }
 
+  .page__content--prizes {
+	width: 85%;
+	margin: 2rem auto;
+  }
+
+  .prizes {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+  }
+
+  .basic-prizes, .special-prizes {
+	border: 1px solid var(--color-primary);
+	padding: 1rem 2rem;
+  }
+
+  .prize {
+	padding-left: 1rem;
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+  }
+
+  .prize-offer .rule {
+	padding: 1rem 0.5rem;
+  }
+
+
 	@media (min-width: 1080px) {
 		.footer__main {
 			max-width: 700px;
@@ -881,6 +909,22 @@ option {
 	h1 {
 		color: var(--color-light);
 	}
+
+	.prizes {
+	flex-direction: row;
+	justify-content: center;
+  }
+
+  .prize-offer {
+	margin: 0 auto 3rem auto;
+	width: 90%;
+	display: flex;
+	justify-content: space-between;
+  }
+
+  .basic-prizes, .special-prizes {
+	width: 40%;
+  }
 
 	
 	.menu--active a::after {
