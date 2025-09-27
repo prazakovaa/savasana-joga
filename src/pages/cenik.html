@@ -56,7 +56,7 @@ permalink: /cenik/index.html
 
   <main class="page__content--prizes">
         <div class="prizes">
-            <div class="basic-prizes">
+            <div class="basic-prizes scroll">
                 <h2>Základní vstupné</h2>
                 <div class="prize">
                 <p>Lekce 75 minut</p>
@@ -74,7 +74,7 @@ permalink: /cenik/index.html
                 </div>
             </div>
             
-            <div class="special-prizes">
+            <div class="special-prizes scroll scroll2">
                 <h2>Zvýhodněné vstupné</h2>
                 <p style="opacity: 80%">Při nahrání kreditu v částce <span class="color-b">alespoň 1000 Kč</span>, vám přidáme finanční bonus ve výši <span class="color-b">170 Kč</span>. <br>
                     Zvýhodní se vám i <span class="color-b">platba kreditem</span>.</p>
@@ -108,6 +108,22 @@ permalink: /cenik/index.html
         </div>
         </div>
 
+    <div class="reservation">
+        <div class="rule-name">
+            <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24"><path fill="#AD4600" d="M20.437 11H3.563a1.5 1.5 0 0 1-1.5-1.5V5.565a1.5 1.5 0 0 1 1.5-1.5h16.874a1.5 1.5 0 0 1 1.5 1.5v3.93a1.5 1.5 0 0 1-1.5 1.505M3.563 5.065a.5.5 0 0 0-.5.5v3.93a.5.5 0 0 0 .5.5h16.874a.5.5 0 0 0 .5-.5v-3.93a.5.5 0 0 0-.5-.5Zm16.874 14.87H3.563a1.5 1.5 0 0 1-1.5-1.5v-3.93a1.5 1.5 0 0 1 1.5-1.5h16.874a1.5 1.5 0 0 1 1.5 1.5v3.93a1.5 1.5 0 0 1-1.5 1.5m-16.874-5.93a.5.5 0 0 0-.5.5v3.93a.5.5 0 0 0 .5.5h16.874a.5.5 0 0 0 .5-.5v-3.93a.5.5 0 0 0-.5-.5Z"/><circle cx="5.563" cy="7.53" r=".5" fill="#AD4600"/><circle cx="7.563" cy="7.53" r=".5" fill="#AD4600"/><path fill="#AD4600" d="M13.452 8.03a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1Z"/><circle cx="5.563" cy="16.47" r=".5" fill="#AD4600"/><circle cx="7.563" cy="16.47" r=".5" fill="#AD4600"/><path fill="#AD4600" d="M13.452 16.97a.5.5 0 0 1 0-1h5a.5.5 0 0 1 0 1Z"/></svg>
+            <h2>REZERVAČNÍ SYSTÉM</h2>
+        </div>
+        <div class="reser-text">
+            <p>
+                <a class="color" href="https://rezervujeme.cz/savasana/">Rezervační systém</a> 
+                je naše nová služba pro registrování na lekce.
+                Přihlášení není vůbec těžké, ale přesto <a class="color" target="_blank" href="../static/img/manual.jpg">zde</a> najdete k nahlednutí foto návod.
+            </p>
+            
+        </div>
+        
+    </div>
+
     <div class="only-desktop" id="pronajem">
         <div class="article-section">
             <img src="../static/img/article3.avif" alt="Náhledová fotografie k nabídce">
@@ -121,6 +137,7 @@ permalink: /cenik/index.html
             </div>
         </div>
     </div>
+
   </main>
 
       <footer class="page__footer">
@@ -170,5 +187,23 @@ permalink: /cenik/index.html
     </footer>
 
 <script src="../static/js/hamburger.js"></script>
+<script>
+  const boxes = document.querySelectorAll('.scroll');
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // odpozorovat, pokud chceme jednou
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+// přidat všechny boxy do observeru
+boxes.forEach(box => observer.observe(box));
+
+</script>
 </body>
 </html>

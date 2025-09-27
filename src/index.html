@@ -51,10 +51,10 @@
     <div class="header-top scroll">
       <p class="color">Vaše oblíbená jóga v srdci Jablonce.</p>
       <h1>ŠAVÁSANA
-        <span class="fancy-text">studio</span>
+        <span class="fancy-text">studio</span> 
       </h1>
     </div>
-    <div class="header-bottom scroll2">
+    <div class="header-bottom scroll scroll2">
       <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">
         Rezervace</a>
       <a href="#main-page"><img src="static/img/icons/arrow.svg" style="opacity: 0.5;" alt="Ukazovací šipka"></a>
@@ -119,6 +119,7 @@
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
+        </div>
 
       <noscript>
         <p>Jógové studio s naučnými články o józe! Naučte se u nás základy jógy pro úplné začátečníky!</p>
@@ -133,12 +134,12 @@
                 <h3>Jóga jako prostor pro sebe</h3>
                 <p class="less">Jóga není jen cvičení na podložce. Je to tisíceletá filozofie, která propojuje tělo, dech a mysl. Učí nás zpomalit, vnímat přítomný okamžik a najít vnitřní rovnováhu. Ať už hledáte...</p>
               </div>
-              <a href="pages/clanky/joga.html" target="_blank" class="link color">Číst celý článek</a>
+              <a href="/joga/" target="_blank" class="link color">Číst celý článek</a>
             </div>
           </div>
-          </div>
+      </div>
 
-    </div class="news">
+    </div class="news scroll">
     <div class="only-mobile">
         <div class="news--latest">
   {% assign latest = collections.news %}
@@ -178,7 +179,7 @@
 </div>
 </div>
 
-    <div class="only-desktop">
+    <div class="only-desktop scroll">
         <div class="news--three">
           {% assign latest = collections.news %}
           {% for item in latest limit:3 %}
@@ -310,7 +311,7 @@
               <h3>Poprvé na podložce? Vše, co potřebujete vědět.</h3>
               <p class="less">Na józe je krásné, že ji může začít praktikovat kdokoliv a v jakémkoliv věku. Forem jógy je totiž mnoho a každý si tu svou, která ho v daný moment na jeho cestě podpoří, může najít. Doporučujeme vyzkoušet různé...</p>
               </div>
-              <a class="link" target="_blank" href="pages/clanky/zacatek.html">Číst celý článek</a>
+              <a class="link" target="_blank" href="/zacatek/">Číst celý článek</a>
             </div>
           </div>
           </div>
@@ -502,7 +503,7 @@ const observer = new IntersectionObserver((entries, observer) => {
     }
   });
 }, {
-  threshold: 0.15
+  threshold: 0.25
 });
 
 // přidat všechny boxy do observeru
