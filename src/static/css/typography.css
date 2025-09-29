@@ -58,6 +58,12 @@
 		font-weight: 550;
 		color: var(--color-primary);
 	}
+
+	.citation {
+		font-size: 1rem;
+		font-weight: 400;
+		font-family: 'Unna', serif;
+	}
 	menu h1 {
 		font-size: 32px;
 		color: var(--color-light);
@@ -84,5 +90,10 @@
 	h4 {
 		font-size: 18px;
 		margin: 0;
+	}
+
+	#onas h2 {
+		padding: 0;
+		margin: 0.5rem;
 	}
 }

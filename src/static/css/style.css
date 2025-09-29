@@ -345,7 +345,9 @@ a.btn.btn--sign.btn--white:hover{
 .filters h2 {
 	margin: 0;
 }
-
+.prizes.prizes-individual {
+	margin: 2rem 0;
+  }
 #filter-lektor, #filter-obtiznost {
 	padding: .4rem;
 	border: 1px solid var(--color-primary);
@@ -439,6 +441,10 @@ option {
 	}
 	.header-logo-img{
 		width: 5rem;
+	}
+	.header-policy {
+		background-image: none;
+		height: max-content;
 	}
 	.news {
 		margin: 7vh 0;
@@ -881,7 +887,7 @@ option {
   }
 
   .teacher-card.zuzanabursova{
-	background: url('../img/lektorky.jpg') center/cover no-repeat;
+	background: url('../img/ZuzanaBursová.jpg') center/cover no-repeat;
   }
 
 
@@ -994,6 +1000,10 @@ option {
 	width: 40%;
   }
 
+  .prizes.prizes-individual {
+	margin: 2rem 0;
+  }
+
 	
 	.menu--active a::after {
 	content: "";
@@ -1016,6 +1026,24 @@ option {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+	}
+
+	.header-policy {
+		display: flex;
+		justify-content: end;
+		background: none;
+		height: 40vh;
+	}
+
+	.main-zasady {
+		display: flex;
+		justify-content: center;
+		align-items:flex-end;
+		height: 20vh;
+	}
+
+	.main-zasady h1 {
+		color: var(--color-primary);
 	}
 
 	.page__header .header__nav {
@@ -1186,6 +1214,15 @@ option {
 		padding: 1rem 0;
 	}
 
+	.page__content--policy .article-part p {
+		width: 60%;
+		padding: 1rem 0;
+	}
+
+	.page__content--policy .article-part > p {
+		margin: 0;
+	}
+
 	.article-part > p {
 		max-width: max-content;
 		margin: 0 auto;
@@ -1238,6 +1275,20 @@ option {
 		gap: 2rem;
 		width: 100%;
 		text-align: left;
+	}
+
+	.prizes-indiv {
+		display: flex;
+		justify-content: space-around;
+	}
+	.prizes-individual .basic-prizes{
+		width: 70%;
+	}
+	.prizes-individual h2 {
+		padding-left: 4rem;
+	}
+	.prize-for-one, .prize-for-more {
+		width: 30%;
 	}
 
 }
