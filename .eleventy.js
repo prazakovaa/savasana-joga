@@ -20,7 +20,7 @@ module.exports = function(eleventyConfig) {
   // Sitemap plugin
   eleventyConfig.addPlugin(sitemap, {
     sitemap: {
-      hostname: "https://savasana.cz", // nahraď svou doménou
+      hostname: "https://www.savasana.cz",
     },
   });
 
