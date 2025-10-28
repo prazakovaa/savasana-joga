@@ -8,8 +8,8 @@
   status = 200
 
 [[redirects]]
-  from = "http://savasana.cz/*"
-  to = "https://savasana.cz/:splat"
+  from = "http://www.savasana.cz/*"
+  to = "https://www.savasana.cz/:splat"
   status = 301
   force = true
 
