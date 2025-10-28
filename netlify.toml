@@ -1,8 +1,23 @@
 [build]
-publish = "_site"
-command = "npx eleventy"
+  publish = "_site"
+  command = "npx eleventy"
 
 [[redirects]]
   from = "/admin"
   to = "/admin/admin.html"
   status = 200
+
+[[redirects]]
+  from = "http://savasana.cz/*"
+  to = "https://savasana.cz/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "no-referrer"
+
