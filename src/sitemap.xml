@@ -1,0 +1,13 @@
+---
+permalink: /sitemap.xml
+layout: null
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://savasana.cz/</loc></url>
+  <url><loc>https://savasana.cz/lekce/</loc></url>
+  <url><loc>https://savasana.cz/lektori/</loc></url>
+  <url><loc>https://savasana.cz/kontakt/</loc></url>
+</urlset>
+

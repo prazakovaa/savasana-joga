@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+
+Sitemap: https://www.savasana.cz/sitemap.xml
+
+
