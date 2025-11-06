@@ -25,6 +25,17 @@
 		scroll-behavior: smooth;
 		background-color: var(--color-light);
 	}
+	.warning {
+		background-color: #EF8D4B;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		align-items: center;
+		color: black;
+		width: 80%;
+		margin: 0 auto;
+		padding: 1rem 2rem;
+	}
 	.page {
 		background-color: var(--color-light);
 	}
@@ -1289,6 +1300,14 @@ option {
 	}
 	.prize-for-one, .prize-for-more {
 		width: 30%;
+	}
+
+
+	.warning {
+		flex-direction: row;
+		gap: 2rem;
+		width: 80%;
+		padding: 0.2rem 2rem;
 	}
 
 }
