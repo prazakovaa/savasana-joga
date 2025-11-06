@@ -8,6 +8,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/admin/config.yml": "admin/config.yml" });
   eleventyConfig.addPassthroughCopy("static/favicon.ico");
 
+  //aktuality -> raw
+  eleventyConfig.addFilter("raw", function(value) {
+    return value;
+  });
+
 
   // Kolekce "news"
   eleventyConfig.addCollection("news", function(collectionApi) {
