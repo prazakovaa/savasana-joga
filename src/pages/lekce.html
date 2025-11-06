@@ -536,33 +536,40 @@ V období <span class="color-b">babího léta</span> mohou být lekce lehce nár
   });
 </script>
 <script>
-const lektorFilter = document.getElementById("filter-lektor");
-const obtiznostFilter = document.getElementById("filter-obtiznost");
-const lessons = document.querySelectorAll(".dropdown");
+document.addEventListener("DOMContentLoaded", () => {
+  const lektorFilter = document.getElementById("filter-lektor");
+  const obtiznostFilter = document.getElementById("filter-obtiznost");
+  const lessons = document.querySelectorAll(".dropdown");
 
-function filterLessons() {
-  const selectedLektor = lektorFilter.value.trim();
-  const obtiznost = obtiznostFilter.value;
+  function filterLessons() {
+    const selectedLektor = lektorFilter.value.trim().toLowerCase();
+    const selectedObtiznost = obtiznostFilter.value.trim();
 
-  lessons.forEach(lesson => {
-    const lessonLektori = lesson.dataset.lektor
-      .split(",")
-      .map(l => l.trim());
-    const lessonObtiznost = lesson.dataset.obtiznost;
+        lessons.forEach(lesson => {
+  const rawLektori = lesson.dataset.lektor || ""; // pokud neexistuje, použije prázdný string
+  const lessonLektori = rawLektori
+    .split(",")
+    .map(l => l.trim().toLowerCase());
 
-    const matchLektor = !selectedLektor || lessonLektori.includes(selectedLektor);
-    const matchObtiznost = !obtiznost || lessonObtiznost === obtiznost;
+  const lessonObtiznost = lesson.dataset.obtiznost || "";
+  
+  const lektorMatch = selectedLektor === "" || lessonLektori.includes(selectedLektor);
+  const obtiznostMatch = selectedObtiznost === "" || lessonObtiznost === selectedObtiznost;
 
-    if (matchLektor && matchObtiznost) {
-      lesson.style.display = "";
-    } else {
-      lesson.style.display = "none";
-    }
-  });
-}
+  lesson.style.display = (lektorMatch && obtiznostMatch) ? "" : "none";
+});
+  }
 
-lektorFilter.addEventListener("change", filterLessons);
-obtiznostFilter.addEventListener("change", filterLessons);
+  // spustíme filtr při každé změně selectu
+  lektorFilter.addEventListener("change", filterLessons);
+  obtiznostFilter.addEventListener("change", filterLessons);
+
+  // filtr spustíme hned při načtení stránky
+  filterLessons();
+});
 </script>
+
+
+
 </body>
 </html>
