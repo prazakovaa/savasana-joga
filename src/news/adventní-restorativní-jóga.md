@@ -1,6 +1,6 @@
 ---
 title: Adventní restorativní jóga
-date: 2025-11-07T11:57:00.000+01:00
+date: 2025-12-02T19:45:00.000+01:00
 image: /static/uploads/restorativní-jóga-4-.png
 category: Akce
 ---
