@@ -55,25 +55,29 @@
 
   .news-category[data-cat="důležité"], .filter-pole button[data-filter="důležité"].active {
     background-color: rgb(255, 159, 159);
-    border: 1px solid darkred;
+    border: 2px solid darkred;
+    border-color: darkred;
     color: darkred;
   }
 
   .news-category[data-cat="jiné"], .filter-pole button[data-filter="jiné"].active {
     background-color: lightskyblue;
-    border: 1px solid darkblue;
+    border: 2px solid darkblue;
+    border-color: darkblue;
     color: darkblue;
   }
 
   .news-category[data-cat="akce"], .filter-pole button[data-filter="akce"].active {
     background-color: rgb(222, 236, 236);
-    border: 1px solid rgb(0, 127, 127);
+    border: 2px solid rgb(0, 127, 127);
+    border-color: rgb(0, 127, 127);
     color: rgb(0, 114, 114);
   }
 
   .news-category[data-cat="blog"], .filter-pole button[data-filter="blog"].active {
     background-color: rgb(248, 220, 188);
-    border: 1px solid rgb(187, 136, 6);
+    border: 2px solid rgb(187, 136, 6);
+    border-color: rgb(187, 136, 6);
     color: rgb(131, 79, 5);
   }
 
@@ -212,13 +216,14 @@
   }
 
   .filter-pole button {
-    background-color: white;
     margin: 0.2rem;
     width: 85px;
     padding: 0.3em 0.7em;
     border-radius: 15px;
+    border: 1px solid var(--color-primary);
     display: inline-block;
   }
+  
 
   .page__content--service button {
     border: 1px solid var(--color-primary);
