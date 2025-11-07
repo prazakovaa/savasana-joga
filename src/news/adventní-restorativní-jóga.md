@@ -12,7 +12,7 @@ Je tu posvátný čas adventu...
 
 ❤️Je to čas klidu, radosti a vděčnosti. ❤️Je o láskyplných pohledech do očí se svými blízkými. ❤️Je o vzájemném sdílení času a pozornosti.
 
-Přijďte na adventní restorativní jógu, letos naposledy. Dopřejte si čas na uvolnění těla a zastavte kolotoč myšlenek. V něžné 🪶adventní meditaci se společně naladíme na nádherný, posvátný čas tohoto období.
+Přijďte na adventní restorativní jógu, letos naposledy. Dopřejte si **čas na uvolnění těla** a **zastavte kolotoč myšlenek**. V něžné 🪶**adventní meditaci** se společně naladíme na nádherný, posvátný čas tohoto období.
 
 S sebou potřebujete jen pohodlné oblečení.
 
