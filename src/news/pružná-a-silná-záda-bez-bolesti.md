@@ -1,6 +1,6 @@
 ---
 title: Pružná a silná záda bez bolesti
-date: 2025-11-15T12:19:00.000+01:00
+date: 2025-11-29T12:19:00.000+01:00
 image: /static/uploads/pružná-silná-záda-bez-bolesti-1-.png
 category: Akce
 ---
