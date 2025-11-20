@@ -242,6 +242,9 @@ a.btn.btn--sign.btn--white:hover{
 	.icon-link.money::before {
 		background-image: url("../img/icons/money.svg");
 	}
+	p.icon-link.star a {
+		padding: 0 0.3rem;
+	}
 	/* LIGHTGALLERY */
 	.thumbnails {
     height: 150px;

@@ -55,7 +55,7 @@
    <div class="only-mobile">
    <div class="header__main main-m-other">
     <div class="header-top scroll">
-      <p class="color">Vaše oblíbená jóga v srdci Jablonce.</p>
+      <p class="color">Vaše oblíbené místo v srdci Jablonce.</p>
       <h1>ŠAVÁSANA
         <span class="fancy-text">studio</span> 
       </h1>
@@ -71,7 +71,7 @@
    <div class="only-desktop">
     <div class="header__main">
       <h1 class="scroll">Jóga je více <br> než jen fyzické cvičení.</h1>
-      <p class="scroll scroll2 color">Jsme rodinné jógové studio pro lidi se zájmem <br>o zdravý pohyb. Vaše oblíbená jóga v srdci Jablonce.</p>
+      <p class="scroll scroll2 color">Jsme rodinné jógové studio pro lidi se zájmem o zdravý <br>životní styl. Vaše oblíbené místo v srdci Jablonce.</p>
       <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">Rezervace</a>
     </div>
    </div>
@@ -150,7 +150,7 @@
         <div class="news--latest">
   {% assign latest = collections.news %}
   {% for item in latest limit:1 %}
-    <article class="news-item">
+    <article class="news-item" data-date="{{ item.date }}">
       <div class="news-profile">
         <img src="static/img/logo.png" alt="Profilová fotografie, portrét">
         <div class="profile-name">
@@ -189,7 +189,7 @@
         <div class="news--three">
           {% assign latest = collections.news %}
           {% for item in latest limit:3 %}
-          <article class="news-item">
+          <article class="news-item" data-date="{{ item.date }}">
             <div class="news-profile">
               <img src="static/img/logo.png" alt="Profilová fotografie, portrét">
               <div class="profile-name">
@@ -224,8 +224,8 @@
         </div>
     </div>
 
-<a class="icon-link facebook" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ">Více aktualit na <span class="color"> Facebooku</span></a>
-    </section>
+    <p class="icon-link star">Více aktualit na našem <a class="color" target="_blank" href="https://www.facebook.com/savasanajablonec/?locale=cs_CZ"> facebooku</a> nebo <a class="color" href="/aktuality/">zde</a>.</p>
+  </section>
 
     <div class="only-desktop">
       <div class="article-section section-bigger">
@@ -470,6 +470,50 @@
       prevEl: '.swiper-button-prev',
     },
   });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  function sortArticles(containerSelector, limit = null) {
+    const container = document.querySelector(containerSelector);
+    if (!container) return;
+
+    const articles = Array.from(container.querySelectorAll(".news-item"));
+
+    const today = new Date();
+    const upcoming = [];
+    const past = [];
+
+    articles.forEach(article => {
+      const dateStr = article.dataset.date;
+      if (!dateStr) return;
+
+      const date = new Date(dateStr);
+      if (date >= today) upcoming.push({ article, date });
+      else past.push({ article, date });
+    });
+
+    upcoming.sort((a, b) => a.date - b.date); // nejbližší první
+    past.sort((a, b) => b.date - a.date);     // poslední minulé první
+
+    const sorted = [...upcoming, ...past];
+
+    // pokud je limit nastavený, vezmeme jen tolik položek
+    const limited = limit ? sorted.slice(0, limit) : sorted;
+
+    // vymažeme container a vložíme seřazené články
+    container.innerHTML = "";
+    limited.forEach(item => container.appendChild(item.article));
+  }
+
+  // desktop – 3 články
+  sortArticles(".news--three", 3);
+
+  // mobil – 1 článek
+  sortArticles(".news--latest", 1);
+
+});
+
 </script>
 <script>
   document.querySelectorAll('.dropdown').forEach(dropdown => {

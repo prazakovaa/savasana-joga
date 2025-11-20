@@ -30,6 +30,7 @@ module.exports = function(eleventyConfig) {
       hostname: "https://www.savasana.cz",
     },
   });
+  
 
   // Výstupní složky
   return {
