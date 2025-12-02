@@ -4,7 +4,9 @@ date: 2025-11-29T12:19:00.000+01:00
 image: /static/uploads/pružná-silná-záda-bez-bolesti-1-.png
 category: Akce
 ---
-**!!!Přihlašování je možné již jen do soboty 8. listopadu!!!**
+**Bolí vás záda**? **Ramena**? **Krk**? "**Esíčka**"? A chcete těmto partiím přinést **trvalou úlevu**? NO TAK SE **PŘIHLAŠTE** na tento workshop, ať víte, jak na to ;-)
+
+\-----------------------------------------------------------------
 
 **Dvoudenní intenzivní workshop**
 
