@@ -74,6 +74,38 @@
 		border-radius: 20rem;
 	}
 
+	#cookie-banner {
+		position:fixed;
+		bottom: 0;
+		padding: 15px 25px;
+		left: 50%;
+  		transform: translateX(-50%);
+		width: 95%;
+		background:#222;
+		color:white;
+		display:none;
+		z-index:1000;
+	}
+
+	.cookie-wrap {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+	}
+
+	#cookie-banner p {
+		color:white;
+		padding: 0 2%;
+	}
+
+	#accept-cookies {
+		padding: 0.5rem 1.5rem;
+		border-radius: 100px;
+		margin-left: auto;
+		max-height: 2.5rem;
+	}
+
     .only-desktop { display: none; }
     .only-mobile { display: block; }
 }
