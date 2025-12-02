@@ -123,10 +123,10 @@ permalink: /aktuality/index.html
             </div>
             {% endif %}
 
-            {% if item.data.image2 %}
-            <div class="news-image only-desktop">
-              <a href="{{ item.data.image2 }}"><img src="{{ item.data.image2 }}" alt="Image"></a>
-            </div>
+            {% if item.data.image2 and item.data.image2 != "" and item.data.image2 != "null" %}
+              <div class="news-image only-mobile">
+                <a href="{{ item.data.image2 }}"><img src="{{ item.data.image2 }}" alt="Image"></a>
+              </div>
             {% endif %}
           </div>
 
@@ -151,10 +151,10 @@ permalink: /aktuality/index.html
               <a href="{{ item.data.image }}"><img src="{{ item.data.image }}" alt="Image"></a>
             </div>
             {% endif %}
-            {% if item.data.image2 %}
-            <div class="news-image only-mobile">
-              <a href="{{ item.data.image2 }}"><img src="{{ item.data.image2 }}" alt="Image"></a>
-            </div>
+            {% if item.data.image2 and item.data.image2 != "" and item.data.image2 != "null" %}
+              <div class="news-image only-mobile">
+                <a href="{{ item.data.image2 }}"><img src="{{ item.data.image2 }}" alt="Image"></a>
+              </div>
             {% endif %}
           </div>
       </article>
