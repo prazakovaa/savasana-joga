@@ -1,5 +1,5 @@
 ---
-title: Nejen vánoční poukazy :)
+title: Tip na vánoční dárek  :)
 date: 2025-12-02T13:04:00.000+01:00
 image: /static/uploads/20251201_085902.jpg
 image2: ""
