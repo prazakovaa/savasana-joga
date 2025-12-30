@@ -4,7 +4,7 @@ date: 2025-12-30T16:57:00.000+01:00
 image: /static/uploads/rok_2025.jpg
 category: Důležité
 ---
-#### *Děkujeme vám všem za důvěru v roce 2025 a za všechen společně strávený čas na podložkách i mimo ně :)*
+### ***Děkujeme vám všem za důvěru v roce 2025 a za všechen společně strávený čas na podložkách i mimo ně :)***
 
 Ať už ve studiu nebo na našich jógových víkendech.
 
