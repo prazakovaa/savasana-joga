@@ -1,5 +1,5 @@
 ---
-title: Děkujeme vám všem za důvěru v roce 2025
+title: Děkujeme vám za důvěru v roce 2025
 date: 2025-12-30T16:57:00.000+01:00
 image: /static/uploads/rok_2025.jpg
 category: Důležité
