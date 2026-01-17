@@ -36,9 +36,9 @@ category: Akce
 
 🌿 **Dechové techniky pro aktivaci vnitřní energie**
 
-Dostanete domů tištěné materiály s cvičebními sekvencemi a doporučeními. Těšte se na komorní prostředí pro maximální osobní přístup. Náplň i doporučení z workshopu jsou koncipovány tak, že je **i časově vytížený člověk** **zvládne zařadit do své denní rutiny** ;-).
+Dostanete domů tištěné materiály s cvičebními sekvencemi a doporučeními. Těšte se na komorní prostředí pro maximální osobní přístup. Náplň i doporučení z workshopu jsou koncipovány tak, že je **i časově vytížený člověk** **zvládne**[](https://rezervujeme.cz/savasana/) **zařadit do své denní rutiny** ;-).
 
-Workshopem vás provede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialistka na ajurvédské principy - více na [www.studio-lotus-spirit.com](www.studio-lotus-spirit.com)
+Workshopem vás provede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialistka na ajurvédské principy - více na <https://www.studio-lotus-spirit.com/>[](www.studio-lotus-spirit.com)
 
-Přihlásit se na workshop můžete zde: [rezervujeme.cz/savasana](rezervujeme.cz/savasana). [](rezervujeme.cz/savasana)Vaše rezervace je platná po zaplacení celého kurzovného. 
+[](www.studio-lotus-spirit.com)[](www.studio-lotus-spirit.com)Přihlásit se na workshop můžete zde: <https://rezervujeme.cz/savasana/> [.](rezervujeme.cz/savasana)Vaše rezervace je platná po zaplacení celého kurzovného. 
 [](www.studio-lotus-spirit.com)[](www.studio-lotus-spirit.com)
