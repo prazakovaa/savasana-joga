@@ -10,6 +10,6 @@ Yin jóga vychází z čínské medicíny a pracuje s meridiány jednotlivých o
 
 Element vody je klíčový pro práci s naší životní energií, která sídlí v ledvinách. Každému z nás bylo dána do vínku určité množství této životní esence. Praktikováním pozic, které pracují s meridiánem ledvin, děláte mnoho dobrého pro **uchování své vitality** a pro **podporu imunitního systému**. Yin jóga zaměřená na ledviny může pomoci při problémech se spánkem, s bolestí v bedrech, emocí strachu a úzkosti či pokud trpíte na zadržování vody a otoky.
 
-Lekci si rezervujte na https://rezervujeme.cz/savasana/
+Lekci si rezervujte na <https://rezervujeme.cz/savasana/>
 
 Platit můžete kredity, převodem na účet či v hotovosti.
