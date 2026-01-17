@@ -28,8 +28,8 @@ category: Akce
 * jóga nidra pro hlubokou regeneraci tkání a relaxaci těla i mysli
 * komorní prostředí pro maximálně individuální přístup
 
-Workshop vede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialista na ajurvédské principy. Pomáhá klientům nacházet úlevu od napětí v zádech a vytvářet zdravé pohybové návyky. Reference najdete na  [www.studio-lotus-spirit.com.](http://www.studio-lotus-spirit.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwT0ZucTZQZ1c2RGtldmFHbnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6tvmH9wz9D5ZoJCMuMXikTjModXU4dHJa_YgOK4PngEyzyXthLs5VdiNawYQ_aem_FQXec-vwNzqfH0QlNlbuRQ)
+Workshop vede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialista na ajurvédské principy. Pomáhá klientům nacházet úlevu od napětí v zádech a vytvářet zdravé pohybové návyky. Reference najdete na <https://www.studio-lotus-spirit.com/>[](http://www.studio-lotus-spirit.com/?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBEwT0ZucTZQZ1c2RGtldmFHbnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR6tvmH9wz9D5ZoJCMuMXikTjModXU4dHJa_YgOK4PngEyzyXthLs5VdiNawYQ_aem_FQXec-vwNzqfH0QlNlbuRQ)
 
-Přihlášky a harmonogram workshopu zde: [rezervujeme.cz/savasana](rezervujeme.cz/savasana)
+Přihlášky a harmonogram workshopu zde: <https://rezervujeme.cz/savasana/>[](rezervujeme.cz/savasana)
 
 \*\*Naučte se rozumět svému tělu a dejte svým zádům péči, kterou potřebují.\*\*[](https://www.facebook.com/events/2042410249841381)[](https://www.facebook.com/events/2042410249841381)
