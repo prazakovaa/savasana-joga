@@ -8,6 +8,12 @@ category: Akce
 
 \*\*Harmonizace těla a mysli pro přirozenou rovnováhu organismu\*\*
 
+\------------------------------------------------------------------
+
+*Přihlašování možné jen do středy 28.2. do 12:00!!!*
+
+\------------------------------------------------------------------
+
 ***Trápí Vás?***
 
 🌿 Chronická únava bez zjevné příčiny
