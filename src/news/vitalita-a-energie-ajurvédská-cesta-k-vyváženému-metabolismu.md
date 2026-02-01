@@ -4,6 +4,10 @@ date: 2026-02-07T09:00:00.000+01:00
 image: /static/uploads/návrh-bez-názvu-25-.png
 category: Akce
 ---
+**WORKSHOP BUDE PŘESUNUT NA PODZIMNÍ OBDOBÍ. TERMÍN BUDE NA WEBU. DĚKUJEME ZA POCHOPENÍ!**
+
+**\=======================================**
+
 **Dvoudenní intenzivní workshop**
 
 \*\*Harmonizace těla a mysli pro přirozenou rovnováhu organismu\*\*
