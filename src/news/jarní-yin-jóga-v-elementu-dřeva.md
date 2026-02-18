@@ -1,7 +1,7 @@
 ---
 title: Jarní yin jóga v elementu Dřeva
 date: 2026-03-06T18:30:00.000+01:00
-image: /static/uploads/yin-jóga_jaro.png
+image: /static/uploads/img-20250920-wa0009-edit.jpg
 category: Akce
 ---
 Speciální lekce yin jógy s jarní tématikou: 🌳**Element dřeva, játra a žlučník**
