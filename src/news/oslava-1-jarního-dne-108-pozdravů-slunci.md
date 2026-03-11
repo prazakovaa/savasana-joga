@@ -38,7 +38,8 @@ vědomí s hmotou.
 
 ***108 je číslo, které se prolíná celou historií a mytologiemi*** celého vesmíru, nejenom jógy.
 
-
 **První jarní den tohoto roku** neboli jarní rovnodennost **nastává 20. března 2026 v 15.46.** Od
 prvního jarního dne se se noc zkracuje a den prodlužuje. Tento jev trvá do letního slunovratu,
 kdy je den dvakrát delší než noc.
+
+Přihlásit se můžete zde: <https://savasana.rezervujeme.cz/>
