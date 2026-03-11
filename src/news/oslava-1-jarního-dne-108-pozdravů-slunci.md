@@ -42,4 +42,4 @@ vědomí s hmotou.
 prvního jarního dne se se noc zkracuje a den prodlužuje. Tento jev trvá do letního slunovratu,
 kdy je den dvakrát delší než noc.
 
-Přihlásit se můžete zde: <https://savasana.rezervujeme.cz/>
+*Cena a přihlášky v našem rezervačním systému.*
