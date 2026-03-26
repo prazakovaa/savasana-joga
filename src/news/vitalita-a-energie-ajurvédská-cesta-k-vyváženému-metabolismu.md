@@ -4,9 +4,19 @@ date: 2026-02-07T09:00:00.000+01:00
 image: /static/uploads/návrh-bez-názvu-25-.png
 category: Akce
 ---
+**WORKSHOP BUDE PŘESUNUT NA PODZIMNÍ OBDOBÍ. TERMÍN BUDE NA WEBU. DĚKUJEME ZA POCHOPENÍ!**
+
+**\=======================================**
+
 **Dvoudenní intenzivní workshop**
 
-*\*Harmonizace těla a mysli pro přirozenou rovnováhu\**
+\*\*Harmonizace těla a mysli pro přirozenou rovnováhu organismu\*\*
+
+\------------------------------------------------------------------
+
+*Přihlašování možné jen do středy 28.2. do 12:00!!!*
+
+\------------------------------------------------------------------
 
 ***Trápí Vás?***
 
@@ -20,7 +30,7 @@ category: Akce
 
 🌿 Problémy s kvalitou spánku narušující regeneraci a oslabená imunita
 
-**Pak je tento workshop je pro vás!**
+**Pak je tento workshop pro vás! :)**
 
 ***Během dvou dnů se naučíte a získáte:***
 
@@ -36,8 +46,9 @@ category: Akce
 
 🌿 **Dechové techniky pro aktivaci vnitřní energie**
 
-Dostanete domů tištěné materiály s cvičebními sekvencemi a doporučeními. Těšte se na komorní prostředí pro maximální osobní přístup.
+Dostanete domů tištěné materiály s cvičebními sekvencemi a doporučeními. Těšte se na komorní prostředí pro maximální osobní přístup. Náplň i doporučení z workshopu jsou koncipovány tak, že je **i časově vytížený člověk** **zvládne**[](https://rezervujeme.cz/savasana/) **zařadit do své denní rutiny** ;-).
 
-Workshop vede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialistka na ajurvédské principy - více info o ní a reference na [www.studio-lotus-spirit.com](www.studio-lotus-spirit.com)
+Workshopem vás provede Jana Makovičková, certifikovaný odborník na jógu s mezinárodní certifikací IAYT a specialistka na ajurvédské principy - více na <https://www.studio-lotus-spirit.com/>[](www.studio-lotus-spirit.com)
 
-[](www.studio-lotus-spirit.com)
+[](www.studio-lotus-spirit.com)[](www.studio-lotus-spirit.com)Přihlásit se na workshop můžete zde: <https://rezervujeme.cz/savasana/> [.](rezervujeme.cz/savasana)Vaše rezervace je platná po zaplacení celého kurzovného. 
+[](www.studio-lotus-spirit.com)[](www.studio-lotus-spirit.com)
