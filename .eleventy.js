@@ -6,7 +6,7 @@ module.exports = function(eleventyConfig) {
   // Passthrough copy
   eleventyConfig.addPassthroughCopy({ "src/static": "static" });
   eleventyConfig.addPassthroughCopy({ "src/admin/config.yml": "admin/config.yml" });
-  eleventyConfig.addPassthroughCopy("static/favicon.ico");
+  eleventyConfig.addPassthroughCopy({ "src/static/favicon.ico": "favicon.ico" });
 
   //aktuality -> raw
   eleventyConfig.addFilter("raw", function(value) {

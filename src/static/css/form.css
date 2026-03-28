@@ -1,0 +1,238 @@
+
+    .mobile-jump {
+      display: none;
+      justify-content: center;
+      padding: 1.25rem 1rem 0;
+    }
+ 
+    .page__content--poukazy {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+ 
+    .poukazy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+ 
+    .poukazy-info h1 {
+      font-family: var(--font);
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: var(--color-text);
+      margin-bottom: 1.5rem;
+      line-height: 1.25;
+    }
+ 
+    .poukazy-info ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 1.5rem;
+    }
+ 
+    .poukazy-info ul li {
+      position: relative;
+      padding-left: 1.4rem;
+      margin-bottom: 0.85rem;
+      color: var(--color-text);
+    }
+ 
+    .poukazy-info ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--color-primary);
+      font-size: 1.1rem;
+      line-height: 1.5;
+    }
+ 
+    .poukazy-info .note {
+      border-left: 3px solid var(--color-primary);
+      padding-left: 1rem;
+      color: var(--color-muted);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-top: 1.25rem;
+    }
+ 
+    .poukazy-info .note a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+ 
+    .poukazy-info .note a:hover {
+      text-decoration: underline;
+    }
+ 
+    .poukazy-form-wrap {
+      border: 1.5px solid var(--color-primary);
+      border-radius: var(--radius);
+      padding: 2rem 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      background: transparent;
+    }
+ 
+    .field {
+      position: relative;
+      margin-bottom: 1.35rem;
+    }
+ 
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      background: transparent;
+      border: 1.5px solid var(--color-primary);
+      border-radius: var(--radius);
+      padding: 1.1rem 0.85rem 0.45rem;
+      font-size: 1rem;
+      font-family: var(--font-ui);
+      color: var(--color-text);
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+ 
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--color-primary);
+    }
+
+    .field input,
+.field textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.poukazy-form-wrap {
+  min-width: 0; /* zabrání přetékání v grid kontextu */
+  overflow: hidden;
+}
+
+.field-row {
+  min-width: 0;
+}
+ 
+    .field textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+ 
+    .field label {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1rem;
+      color: var(--color-primary);
+      pointer-events: none;
+      transition: all 0.18s ease;
+      background: var(--color-light);
+      padding: 0 0.25rem;
+      line-height: 1;
+    }
+ 
+    .field--textarea label {
+      top: 1rem;
+      transform: none;
+    }
+ 
+    .field input:focus ~ label,
+    .field input:not(:placeholder-shown) ~ label,
+    .field textarea:focus ~ label,
+    .field textarea:not(:placeholder-shown) ~ label {
+      top: 0;
+      transform: translateY(-50%);
+      font-size: 0.78rem;
+    }
+ 
+    .field--textarea input:focus ~ label,
+    .field--textarea textarea:focus ~ label,
+    .field--textarea textarea:not(:placeholder-shown) ~ label {
+      top: 0;
+      transform: translateY(-50%);
+      font-size: 0.78rem;
+    }
+ 
+    .field input::placeholder,
+    .field textarea::placeholder {
+      color: transparent;
+    }
+ 
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+ 
+    .form-success {
+      display: none;
+      color: var(--color-primary);
+      text-align: center;
+      padding: 1rem 0 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .poukazy-form-wrap h3, .poukazy-info h2 {
+        margin-top: 0;
+        padding-top: 0;
+    }
+ 
+    @media (max-width: 780px) {
+      .mobile-jump {
+        display: flex;
+        margin-top: 2rem;
+      }
+ 
+      .poukazy-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+ 
+      .btn--submit {
+        display: block;
+        margin: 0.5rem auto 0;
+        max-width: 260px;
+      }
+ 
+      .poukazy-form-wrap {
+        margin: 2rem auto;
+        width: 60vw;
+      }
+ 
+      .field-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+ 
+      .page__content--poukazy {
+        padding: 2rem 0;
+        max-width: 85vw;
+      }
+    }
+    @media (min-width: 781px) {
+      .poukazy-grid {
+        align-items: stretch;
+      }
+ 
+      .poukazy-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+      }
+ 
+      .poukazy-form-wrap {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
