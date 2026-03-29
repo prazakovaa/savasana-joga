@@ -1,0 +1,96 @@
+---
+title: dekujeme
+permalink: /dekujeme/index.html
+---
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio Šavásana, jóga pv Jablonci. Nabízíme lekce jógy, dechová cvičení a relaxaci. Přijďte si odpočinout.">
+  <meta name="keywords" content="jóga Jablonec, jóga i pro začátečníky, relaxace, dechová cvičení, studio Šavásana">
+  <title>Jógové studio | Kodex</title>
+  <link rel="icon" href="../static/img/logo.png" type="image/png">
+    <style>
+        :root {
+            --color-primary: #e67e22;
+            --color-text: #000000;
+            --color-muted: #555555;
+            --radius: 20px;
+            --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #F5F5F5;
+            font-family: var(--font);
+        }
+
+        .success-card {
+            background: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: var(--radius);
+            border: 1.5px solid var(--color-primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 20vw;
+            min-width: 200px;
+        }
+
+        .success-card h1 {
+            font-size: 1.5rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+
+        .success-card p {
+            font-size: 1rem;
+            color: var(--color-muted);
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--color-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: opacity 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .back-link::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-left: 2px solid var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+            transform: rotate(45deg);
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-card">
+        <h1>Děkujeme!</h1>
+        <p>Brzy vás kontaktujeme s detaily.</p>
+        
+        <a href="/poukazy" class="back-link">Zpět na webové stránky</a>
+    </div>
+
+</body>
+</html>

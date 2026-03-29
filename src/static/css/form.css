@@ -121,24 +121,24 @@
   min-width: 0;
 }
  
-    .field textarea {
+.field textarea {
       resize: vertical;
-      min-height: 90px;
+      min-height: 65px;
     }
  
-    .field label {
-      position: absolute;
-      left: 0.85rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1rem;
-      color: var(--color-primary);
-      pointer-events: none;
-      transition: all 0.18s ease;
-      background: var(--color-light);
-      padding: 0 0.25rem;
-      line-height: 1;
-    }
+.field label {
+    position: absolute;
+    left: 0.85rem;
+    top: 1rem;
+    transform: none;
+    font-size: 1rem;
+    color: var(--color-primary);
+    pointer-events: none;
+    transition: all 0.18s ease;
+    background: var(--color-light);
+    padding: 0 0.25rem;
+    line-height: 1;
+}
  
     .field--textarea label {
       top: 1rem;
@@ -169,9 +169,51 @@
  
     .field-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.2fr 2fr;
       gap: 1rem;
     }
+
+    #lekceFields {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  align-items: start; /* Zarovná pole k hornímu okraji */
+}
+
+.field select {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid var(--color-primary);
+    padding: 1.1rem 0.85rem 0.45rem;
+    font-size: 1rem;
+    color: var(--color-primary);
+    outline: none;
+    cursor: pointer;
+    
+    appearance: none;
+    -webkit-appearance: none;
+    
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23e67e22' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+}
+
+/* Změna barvy borderu při kliknutí */
+.field select:focus {
+    border-color: #d35400; /* Trochu tmavší oranžová při focusu */
+}
+
+.field select:focus {
+    border-color: #d35400; /* Trochu tmavší oranžová při focusu */
+}
+
+.field select ~ label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.78rem;
+    background: var(--color-light);
+}
  
     .form-success {
       display: none;
@@ -185,6 +227,101 @@
         margin-top: 0;
         padding-top: 0;
     }
+    .field-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: #2f1703;
+  margin-top: 0;
+  padding-left: 2px;
+}
+/* Toggle tlačítka pro typ poukazu */
+.field--toggle {
+  margin-bottom: 1.5rem;
+}
+.toggle-buttons {
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+  border: 2px solid var(--color-primary);
+}
+.toggle-btn {
+  flex: 1;
+  padding: 12px 20px;
+  border: none;
+  background: #fff;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.toggle-btn:hover {
+  background: #fef5ec;
+}
+.toggle-btn.active {
+  background: var(--color-secondary);
+  color: #fff;
+}
+/* Radio buttony pro formu poukazu */
+
+.field--radio label.radio-option {
+  position: static;
+  transform: none;
+  background: transparent;
+  padding: 0;
+  pointer-events: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+.field--radio {
+  margin: 1.5rem 0;
+}
+.radio-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+.radio-label .required {
+  color: #e67e22;
+}
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.radio-option input[type="radio"] {
+  appearance: auto !important;
+  -webkit-appearance: radio !important;
+  accent-color: var(--color-primary) !important;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.field select {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.field select:focus {
+  outline: none;
+  border-color: #e67e22;
+}
  
     @media (max-width: 780px) {
       .mobile-jump {
