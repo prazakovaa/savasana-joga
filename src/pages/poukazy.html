@@ -17,7 +17,7 @@ permalink: /poukazy/index.html
 </head>
 
 <body>
-  <header class="page__header header--other">
+  <header class="page__header header--other header--poukazy">
     <!--- NAVIGACE + HAMBURGER MENU -->
     <nav class="header__nav">
         <a href="../../index.html"><p class="only-mobile">ŠAVÁSÁNA <span class="fancy-text">  studio</span></p></a>
@@ -33,7 +33,8 @@ permalink: /poukazy/index.html
         <a href="../../index.html"><h1 class="only-desktop">ŠAVÁSÁNA <span class="fancy-text">  studio</span></h1></a>
         <div class="links">
         <li class="menu only-mobile"><a href="../../index.html">Hlavní stránka</a></li>
-        <li class="menu menu--active"><a href="../kodex">Kodex studia</a></li>
+        <li class="menu"><a href="../kodex">Kodex studia</a></li>
+        <li class="menu menu--active"><a href="../poukazy">Dárkové poukazy</a></li>
         <li class="menu"><a href="../lekce">Lekce</a></li>
         <li class="menu"><a href="../cenik">Ceník</a></li>
         <li class="menu"><a href="../aktuality">Aktuality</a></li>
@@ -47,7 +48,7 @@ permalink: /poukazy/index.html
    <div class="header__main main--other">
       <h1>Dárkové poukazy</h1>
       <p class="color only-desktop">Věnujte vašim blízkým dárek, který léčí tělo i hlavu. Darujte jim čas pro sebe.</p>
-      <p class="color only-mobile">Darujte vašim blízkým čas pro sebe.</p>
+      <p class="color only-mobile">Darujte vašim blízkým dárek, který léčí tělo i hlavu. Darujte jim čas pro sebe. </p>
     </div>
    </div>
     </div>
@@ -68,15 +69,17 @@ permalink: /poukazy/index.html
           <li>Na výběr máte <strong>tištěný poukaz či elektronickou</strong> verzi.</li>
           <li>Tištěný poukaz je po domluvě k vyzvednutí ve studiu.</li>
           <li>Elektronický poukaz zašleme na e-mail uvedený ve formuláři a to ihned po obdržení platby.</li>
-          <li>Platnost je uvedena na samotném poukazu.</li>
-          <li>Pokud si přejete změnit nějaké informace z formuláře, <a class="color"href="mailto:savasana.jablonec@gmail.com">napište nám na email</a>.</li>
-        </ul>
+          <li>Platnost jsou <strong>3 měsíce</strong>.</li>
+          </ul>
         <div class="note">
-          Poukaz můžete objednat přes formulář níže nebo osobně ve studiu, osobně ve studiu nebo <a class="color" href="tel:+420606233421">telefonicky</a>.
+          Poukaz můžete objednat přes formulář níže, osobně ve studiu nebo <a class="color" href="tel:+420606233421">telefonicky</a>.
         </div>
       </div>
  
       <div class="poukazy-form-wrap" id="form">
+        <div class="foto-roh only-desktop">
+          <img class="image--full-responsive" src="../static/img/poukazy.png" alt="Dárkový poukaz">
+        </div>
   <form
     name="poukazy"
     method="POST"
@@ -103,10 +106,12 @@ permalink: /poukazy/index.html
       <div class="field">
         <input type="text" id="jmeno" name="jmeno" placeholder="Jméno" required />
         <label for="jmeno">Jméno</label>
+        <span class="field-hint">*Obdarovaného</span>
       </div>
       <div class="field">
         <input type="text" id="prijmeni" name="prijmeni" placeholder="Příjmení" required />
         <label for="prijmeni">Příjmení</label>
+        <span class="field-hint">*Obdarovaného</span>
       </div>
     </div>
 
@@ -115,13 +120,13 @@ permalink: /poukazy/index.html
     <!-- Telefon -->
     <div class="field">
       <input type="tel" id="telefon" name="telefon" placeholder="Telefon" required />
-      <label for="telefon">Telefon</label>
+      <label for="telefon">Váš telefon</label>
     </div>
 
     <!-- Email -->
     <div class="field">
       <input type="email" id="email" name="email" placeholder="Email" required />
-      <label for="email">Email</label>
+      <label for="email">Váš email</label>
     </div>
 
     </div>
@@ -162,12 +167,13 @@ permalink: /poukazy/index.html
         </div>
         </div>
 
-    <!-- Věnování (nepovinné) - společné pro oba typy -->
+    <!-- Věnování (nepovinné) - společné pro oba typy
     <div class="field field--textarea">
       <textarea id="venovani" name="venovani" placeholder="Věnování"></textarea>
       <label for="venovani">Věnování (nepovinné)</label>
       <span class="field-hint">*Text, který bude na poukazu (popř. poznámka pro nás)</span>
     </div>
+  -->
 
     <!-- Online / Fyzický poukaz -->
     <div class="field field--radio">
@@ -190,6 +196,10 @@ permalink: /poukazy/index.html
   </form>
 
 </div>
+
+        <div class="foto-poukaz only-mobile">
+          <img class="image--full-responsive" src="../static/img/poukazy.png" alt="Dárkový poukaz">
+        </div>
 
  
     </div>
@@ -249,29 +259,24 @@ const success = document.getElementById('formSuccess');
 
 if (form) {
   form.addEventListener('submit', function(e) {
-    e.preventDefault(); // TOTO JE KLÍČOVÉ: Zastaví otravné přesměrování/obnovení stránky!
+    e.preventDefault();
 
-    // Posbírá všechna data z formuláře
     const formData = new FormData(form);
 
-    // Odešle data na pozadí do Netlify
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString()
     })
     .then(() => {
-      // ÚSPĚCH! 
-      success.style.display = 'block'; // Zobrazí děkovnou zprávu
-      form.reset(); // Vyčistí vyplněná pole pro případnou další objednávku
+      success.style.display = 'block';
+      form.reset();
       
-      // Volitelně: zpráva po 5 vteřinách zase zmizí
       setTimeout(() => {
         success.style.display = 'none';
       }, 5000);
     })
     .catch((error) => {
-      // Pokud by se něco pokazilo (např. vypadne internet)
       console.error('Chyba odesílání:', error);
       alert('Jejda, něco se pokazilo při odesílání. Zkuste to prosím znovu.');
     });
@@ -280,50 +285,55 @@ if (form) {
 
     document.addEventListener('DOMContentLoaded', function() {
   const toggleBtns = document.querySelectorAll('.toggle-btn');
-  const castkaFields = document.getElementById('castkaFields');
-  const lekceFields = document.getElementById('lekceFields');
-  const typPoukazuInput = document.getElementById('typPoukazu');
-  
-  // Načtení polí
-  const castkaInput = document.getElementById('castka');
-  const lekceSelect = document.getElementById('lekce');
-  const pocetInput = document.getElementById('pocet'); // <-- Přidáno pole pro počet
-  
-  // Výchozí stav po načtení stránky (aktivní je Částka)
-  castkaInput.required = true;
-  lekceSelect.required = false;
-  pocetInput.required = false; // <-- Nesmí být povinné, když není vidět
+const castkaFields = document.getElementById('castkaFields');
+const lekceFields = document.getElementById('lekceFields');
+const typPoukazuInput = document.getElementById('typPoukazu');
 
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('click', function() {
-      // Odstranit active ze všech
-      toggleBtns.forEach(b => b.classList.remove('active'));
-      // Přidat active na kliknuté
-      this.classList.add('active');
-      
-      const type = this.dataset.type;
-      typPoukazuInput.value = type;
-      
-      if (type === 'castka') {
-        castkaFields.style.display = 'block';
-        lekceFields.style.display = 'none';
-        
-        // Nastavení povinných polí
-        castkaInput.required = true;
-        lekceSelect.required = false;
-        pocetInput.required = false; // <-- Vypnutí povinnosti
-        
-      } else {
-        castkaFields.style.display = 'none';
-        lekceFields.style.display = 'grid'; // Zde je váš opravený grid!
-        
-        // Nastavení povinných polí
-        castkaInput.required = false;
-        lekceSelect.required = true;
-        pocetInput.required = true; // <-- Zapnutí povinnosti
-      }
-    });
+function updateFieldNames(type) {
+  const inputCastka = document.getElementById('castka');
+  const selectLekce = document.getElementById('lekce');
+  const inputPocet = document.getElementById('pocet');
+
+  if (type === 'castka') {
+    inputCastka.setAttribute('name', 'castka');
+    inputCastka.required = true;
+
+    selectLekce.removeAttribute('name');
+    selectLekce.required = false;
+    inputPocet.removeAttribute('name');
+  } else {
+    // Aktivujeme lekce, deaktivujeme částku
+    inputCastka.removeAttribute('name');
+    inputCastka.required = false;
+
+    selectLekce.setAttribute('name', 'lekce');
+    selectLekce.required = true;
+    inputPocet.setAttribute('name', 'pocet');
+  }
+}
+
+toggleBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const type = btn.dataset.type;
+    
+    toggleBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    
+    typPoukazuInput.value = type;
+
+    if (type === 'castka') {
+      castkaFields.style.display = 'block';
+      lekceFields.style.display = 'none';
+    } else {
+      castkaFields.style.display = 'none';
+      lekceFields.style.display = 'grid';
+    }
+
+    updateFieldNames(type);
   });
 });
+
+updateFieldNames('castka');
+  });
   </script>
 </html>

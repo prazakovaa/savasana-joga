@@ -417,11 +417,19 @@ option {
   			url('../img/header-bg.avif');                                
 		background-size: cover;
 		background-position: center;
+		background-repeat: no-repeat;
 		padding: 1.5rem;
 	}
 	.header--other{
 		height: 65vh;
 	}
+	.page__header.header--poukazy {
+		background:
+  			linear-gradient(90deg, rgba(255, 255, 255, 0.9) 34.54%, rgba(115, 115, 115, 0.00) 149.84%),
+  			url('../img/header-poukazy.avif');  
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;	}
 	.page__header .btn svg {
 		position: absolute;
 		right: 0.2px;

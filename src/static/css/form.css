@@ -75,7 +75,23 @@
       flex-direction: column;
       gap: 0;
       background: transparent;
+      position: relative;
     }
+
+    .foto-roh {
+  position: absolute;
+
+  bottom: -130px;
+  right: -50px;
+  
+  width: 45%;
+  height: 32%;
+
+  
+  z-index: 1;
+  margin-right: 60px; 
+  margin-bottom: 70px;
+}
  
     .field {
       position: relative;
@@ -110,11 +126,6 @@
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
-}
-
-.poukazy-form-wrap {
-  min-width: 0; /* zabrání přetékání v grid kontextu */
-  overflow: hidden;
 }
 
 .field-row {
@@ -219,8 +230,8 @@
       display: none;
       color: var(--color-primary);
       text-align: center;
-      padding: 1rem 0 0.5rem;
-      font-size: 0.95rem;
+      padding: .5rem;
+      font-size: 1.2rem;
     }
 
     .poukazy-form-wrap h3, .poukazy-info h2 {
@@ -229,9 +240,9 @@
     }
     .field-hint {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #2f1703;
-  margin-top: 0;
+  margin-top: 0.2rem;
   padding-left: 2px;
 }
 /* Toggle tlačítka pro typ poukazu */
