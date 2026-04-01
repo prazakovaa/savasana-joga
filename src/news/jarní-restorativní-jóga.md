@@ -1,7 +1,7 @@
 ---
 title: Jarní restorativní jóga
 date: 2026-04-17T18:40:00.000+02:00
-image: /static/uploads/víte-proč-je-restorativní-praxe-tak-cenná.png
+image: /static/uploads/restorativka-web.png
 category: Akce
 ---
 Speciální lekce pro období jara. Zaměříme se na jarní výzvy z pohledu ajurvédy. Vybranými pozicemi podpoříme zejména játra a žlučník. Díky klidnému plynutí lekce se zklidní i hlava a mysl a nervový systém si odpočine.
