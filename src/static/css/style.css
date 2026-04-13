@@ -517,11 +517,11 @@ option {
         text-align: left;
     }
 	.article-section {
-		margin: 0 auto;
 		display: flex;
 		gap: 3rem;
 		flex-direction: row;
 		width: 85%;
+		margin: 0 auto;
 		max-width: 1400px;
 		background-color: white;
 	}
@@ -1003,6 +1003,25 @@ option {
 	padding: 1rem 2rem;
   }
 
+  .prizes-individual h2, .prize-center {
+	text-align: center;
+	margin-right: 2rem;
+	margin-bottom: .5rem;
+  }
+
+  .for-one {
+	margin-bottom: 2rem;
+	}
+
+  .for-one .prize, .prize-for-more .prize {
+	padding: 0;
+  }
+
+  .for-one .prize p, .prize-for-more .prize p {
+	margin: 0.5rem;
+	padding: 0;
+  }
+
   .prize {
 	padding-left: 1rem;
 	width: 80%;
@@ -1040,10 +1059,15 @@ option {
   }
 
   .prize-offer {
-	margin: 0 auto 3rem auto;
+	margin: 0 auto;
 	width: 90%;
 	display: flex;
 	justify-content: space-between;
+  }
+
+  .single-rule {
+	margin: 0 auto 3.5rem auto;
+	width: 90%;
   }
 
   .basic-prizes, .special-prizes {
@@ -1211,8 +1235,9 @@ option {
 			width: 30%;
 		}
 
-		#pronajem {
-			width: 85%;
+		.only-desktop#pronajem {
+			width: 100%;
+			margin: 0 auto;
 		}
 
 	#onas {
