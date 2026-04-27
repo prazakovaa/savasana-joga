@@ -127,7 +127,7 @@ permalink: /poukazy/index.html
     <!-- Email -->
     <div class="field">
       <input type="email" id="email" name="email" placeholder="Email" required minlength="5"
-        maxlength="254" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
+        maxlength="254" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}$"
         title="Email musí obsahovat @ a doménu. (např. jan.novak@email.com)"/>
       <label for="email">Váš email</label>
     </div>
@@ -257,14 +257,14 @@ permalink: /poukazy/index.html
 </body>
 
   <script>
-    const form = document.getElementById('poukazForm');
-const success = document.getElementById('formSuccess');
+  const form = document.getElementById('poukazForm');
 
-if (form) {
+  if (form) {
   form.addEventListener('submit', function(e) {
     e.preventDefault();
 
     const formData = new FormData(form);
+    formData.append('form-name', 'poukazy');
 
     fetch('/', {
       method: 'POST',
@@ -272,16 +272,11 @@ if (form) {
       body: new URLSearchParams(formData).toString()
     })
     .then(() => {
-      success.style.display = 'block';
-      form.reset();
-      
-      setTimeout(() => {
-        success.style.display = 'none';
-      }, 5000);
+      window.location.href = '/podekovani/';
     })
     .catch((error) => {
-      console.error('Chyba odesílání:', error);
-      alert('Jejda, něco se pokazilo při odesílání. Zkuste to prosím znovu.');
+      console.error('Chyba:', error);
+      alert('Něco se pokazilo. Zkuste to prosím znovu.');
     });
   });
 }
