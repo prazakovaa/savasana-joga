@@ -95,7 +95,7 @@ permalink: /poukazy/index.html
     <!-- Typ poukazu - přepínač -->
     <div class="field field--toggle">
       <div class="toggle-buttons">
-        <button type="button" class="toggle-btn active" data-type="castka">Poukaz s částkou</button>
+        <button type="button" class="toggle-btn active" data-type="castka">Poukaz na konkrétní částku</button>
         <button type="button" class="toggle-btn" data-type="lekce">Poukaz na konkrétní lekci</button>
       </div>
       <input type="hidden" name="typ_poukazu" id="typPoukazu" value="castka" />
@@ -118,13 +118,17 @@ permalink: /poukazy/index.html
 
     <!-- Telefon -->
     <div class="field">
-      <input type="tel" id="telefon" name="telefon" placeholder="Telefon" required />
+      <input type="tel" id="telefon" name="telefon" placeholder="Telefon" required
+      pattern="^\+?[0-9]{9,15}$" minlength="9" maxlength="16"
+      title="Telefonní číslo musí mít 9-15 znaků, volitelně s předvolbou"/>
       <label for="telefon">Váš telefon</label>
     </div>
 
     <!-- Email -->
     <div class="field">
-      <input type="email" id="email" name="email" placeholder="Email" required />
+      <input type="email" id="email" name="email" placeholder="Email" required minlength="5"
+        maxlength="254" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,}$"
+        title="Email musí obsahovat @ a doménu. (např. jan.novak@email.com)"/>
       <label for="email">Váš email</label>
     </div>
 
@@ -133,7 +137,7 @@ permalink: /poukazy/index.html
     <!-- Pole pro ČÁSTKU -->
     <div id="castkaFields">
       <div class="field">
-        <input type="text" id="castka" name="castka" placeholder="Částka" />
+        <input type="text" id="castka" name="castka" placeholder="Částka" minlength="2"/>
         <label for="castka">Částka (Kč)</label>
       </div>
     </div>
