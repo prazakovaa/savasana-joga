@@ -1,5 +1,5 @@
 ---
-title: "Na vlně živlů: Cesta k hluboké regeneraci"
+title: "Na vlně živlů: Cesta k hluboké regeneraci. Element ZEMĚ"
 date: 2026-06-05T18:40:00.000+02:00
 image: /static/uploads/na-vlně-živlů-cesta-k-hluboké-regeneraci.png
 category: Akce
@@ -13,7 +13,7 @@ Harmonogram setkání:
 1. OHEŇ (8.5.): Propuštění vnitřního napětí a nalezení vnitřního klidu
 2. VODA (22.5.): Plynutí, uvolnění kyčlí a emocí
 3. ZEMĚ (5.6.): Pocit bezpečí, stability a opory
-4. VZDUCH (19.6.): Lehkost dechu a klidná mysl
+4. VZDUCH (19.6.): Lehkost dechu i bytí a klidná mysl
 
 Pro tento cyklus máme *jen 10 volných míst*. Aby všichni měli dost osobního prostoru a lektorka se mohla každému účastníku plně věnovat. **Účastnit se můžete i jednotlivých lekcí.**
 
