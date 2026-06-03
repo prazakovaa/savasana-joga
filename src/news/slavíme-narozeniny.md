@@ -1,5 +1,5 @@
 ---
-title: Slavíme narozeniny!
+title: Slavíme narozeniny! 🥳🥳🥳
 date: 2026-06-03T10:12:00.000+02:00
 image: /static/uploads/koláž_studio.jpg
 category: Důležité
