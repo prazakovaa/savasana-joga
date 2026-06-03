@@ -1,5 +1,5 @@
 ---
-title: "Na vlně živlů: Cesta k hluboké regeneraci"
+title: "Na vlně živlů: Cesta k hluboké regeneraci. Element VZDUCHU"
 date: 2026-06-19T18:40:00.000+02:00
 image: /static/uploads/na-vlně-živlů-cesta-k-hluboké-regeneraci.png
 category: Akce
