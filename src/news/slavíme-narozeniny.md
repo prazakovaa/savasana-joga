@@ -8,8 +8,8 @@ V červnu před osmi lety jsme pro vás otevřeli naše jógové studio. Za ty r
 
 **V něčem naopak Šavásana studio zůstává stejné: Nabízí čistý a jednoduše zařízený prostor, který vás příjemně naladí a zklidní, jakmile do něj vstoupíte. Také náš hlavní záměr zůstává stejný: Učit vás**, kteří s námi jógu praktikujete, **zdravým pohybovým vzorcům, a vést vás k citlivějšímu vnímání sebe sama.** 
 
-**V červnu** tedy **slavíme naše osmé narozeniny** 🥳 a **rozhodli jsme se rozdávat dárky**. Protože to, že stále fungujeme a můžeme pro vás vést lekce, pořádat semináře atd., je především vaše zásluha 🤗. Bez vás, vaší přítomnosti na našich lekcích a vaší spokojenosti s námi bychom neměli důvod existovat...
+**V červnu** tedy **slavíme naše osmé narozeniny** 🥳 a **rozhodli jsme se rozdávat dárky**. Protože to, že stále fungujeme a můžeme pro vás vést lekce, pořádat semináře atd., je především vaše zásluha 🤗. Bez vás bychom neměli důvod existovat. ***Vaší důvěry si velmi vážíme a moc vám děkujeme, že existenci našeho studia podporujete svou přítomností v něm***🙏❤🙏.
 
-Mrkněte na <https://savasana.rezervujeme.cz/> nebo **do e-mailu z 3.6.**, v něm je vše popsáno. Ať víte, jak to bude fungovat 😉.
+Ohledně dárečků mrkněte **do e-mailu z 3.6.** 
 
-Nicméně dárky nedárky, pravidelnost ve cvičení je důležitá. Tak mrkněte do rezervačního systému, co pro vás v červnu chystáme, a doražte! Těšíme se s vámi na podložkách!
+Těšíme se s vámi na podložkách!
