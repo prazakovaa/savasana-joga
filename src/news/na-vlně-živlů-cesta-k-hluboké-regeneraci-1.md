@@ -15,7 +15,7 @@ Harmonogram setkání:
 3. ZEMĚ (5.6.): Pocit bezpečí, stability a opory
 4. VZDUCH (19.6.): Lehkost dechu a klidná mysl
 
-Pro tento cyklus máme *jen 10 volných míst*. Aby všichni měli dost osobního prostoru a lektorka se mohla každému účastníku plně věnovat. 
+Pro tento cyklus máme *jen 10 volných míst*. Aby všichni měli dost osobního prostoru a lektorka se mohla každému účastníku plně věnovat. **Účastnit se můžete i jednotlivých lekcí.**
 
 ***A na co se můžete těšit?***
 
