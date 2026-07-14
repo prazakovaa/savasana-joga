@@ -1,5 +1,5 @@
 ---
-title: Prodloužení kreditového zůstatku
+title: Prodloužená platnost kreditového zůstatku
 date: 2026-07-01T15:07:00.000+02:00
 category: Důležité
 ---
