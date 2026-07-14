@@ -16,4 +16,4 @@ Aroma oleje a příjemná masáž hlavy umocní celkový prožitek.
 
 Restorativní jóga je vhodná pro pokročilé i úplné jógové nebo sportovní začátečníky. Dopřejte si čas pro sebe, nejen vaše tělo vám bude vděčné❤🫶❤.
 
-Rezervace zde: [savasana.rezervujeme.cz](savasana.rezervujeme.cz)
+Rezervace zde: <https://www.savasana.rezervujeme.cz>
