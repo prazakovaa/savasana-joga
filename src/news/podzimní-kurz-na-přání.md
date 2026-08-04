@@ -12,7 +12,7 @@ Proto jsme naši nabídku upravili.
 
 ***Prosíme VÁS, kdo máte skutečný zájem o některý z těchto kurzů, abyste vyplnili anketu na odkaze níže. I vy, kteří jste již hlasovali v předešlé anketě.*** Odpovídat můžete **do 31. srpna**. Poté anketu vyhodnotíme.
 
-Nabídka je následující a kapacitu máme od cca poloviny září nejspíše pouze na jeden z těchto kurzů:
+Nabídka je následující a kapacitu máme od cca poloviny září na jeden až dva z těchto kurzů, záleží, které vyberete:
 
 **Jóga pro větší pravidelnost a citelné výsledky**
 
