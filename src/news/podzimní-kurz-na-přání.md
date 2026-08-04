@@ -1,6 +1,6 @@
 ---
 title: Podzimní kurz na přání
-date: 2026-07-27T13:30:00.000+02:00
+date: 2026-08-04T11:52:00.000+02:00
 image: /static/uploads/nabídka-lekcí.jpg
 category: Důležité
 ---
