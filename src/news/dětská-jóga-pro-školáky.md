@@ -1,6 +1,6 @@
 ---
 title: Dětská jóga pro školáky
-date: 2026-07-03T15:00:00.000+02:00
+date: 2026-09-03T15:00:00.000+02:00
 image: /static/uploads/img_20210918_121253.jpg
 category: Důležité
 ---
