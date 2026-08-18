@@ -16,4 +16,4 @@ Je to
 
 Chystáme se od září otevřít kroužek dětské jógy pro **děti ve věku cca 7 až 10 let**. Pro **malou uzavřenou skupinu** (max. 14 dětí) a časově nenáročný - setkávat se budeme **jedenkrát týdně** (pravděpodobně pátky od 15:00). Předpokládaný začátek v polovině září. nebo na tel. 606233421
 
-Pokud vás naše nabídka zaujala, ozvěte se nám co nejdříve na e-mail: [savasana.jablonec@gmail.com](savasana.jablonec@gmail.com) nebo na tel. 606 233 421 a uveďte jméno a rok narození dítěte. Ozveme se vám následně zpět.
+Pokud vás naše nabídka zaujala, ozvěte se nám co nejdříve na e-mail: savasana.jablonec@gmail.com nebo na tel. 606 233 421 a uveďte jméno a rok narození dítěte. Ozveme se vám následně zpět.
