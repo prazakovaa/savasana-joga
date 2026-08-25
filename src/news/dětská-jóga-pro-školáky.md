@@ -1,9 +1,15 @@
 ---
 title: Dětská jóga pro školáky
-date: 2026-09-03T15:00:00.000+02:00
+date: 2026-09-11T15:00:00.000+02:00
 image: /static/uploads/img_20210918_121253.jpg
 category: Důležité
 ---
+***UKÁZKOVÁ LEKCE PROBĚHNE V PÁTEK 11. ZÁŘÍ OD 15:00.*** 
+
+Pokud na ni ještě nejste přihlášení, napište na e-mail **savasana.jablonec@gmail.com** a uveďte jméno dítěte a ročník jeho narození. Ozveme se vám zpět.
+
+\--------------------------------------------------------------------------------------------------------------
+
 Hledáte pro své dítě kroužek, který ho bude bavit? A který toho nabízí opravdu hodně a to **bez tlaku na výkon**. Tak ho vezměte na ***dětskou jógu***!
 
 Je to 
