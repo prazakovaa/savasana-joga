@@ -54,6 +54,7 @@
         <li class="menu"><a href="/aktuality/">Aktuality</a></li>
         <li class="menu"><a href="/lektori/">Lektoři</a></li>
         <li class="menu"><a href="/kontakt/">Kontakt</a></li>
+        <li class="menu only-mobile"><a href="/navod/">Jak rezervovat?</a></li>
         <li class="only-desktop"><a href="https://rezervujeme.cz/savasana/" class="btn btn--white btn--sign">Rezervace</a></li>
         </ul>
     </div>
@@ -69,10 +70,15 @@
       </h1>
     </div>
     <div class="header-bottom scroll scroll2">
-      <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">
-        Rezervace</a>
-      <a href="#main-page"><img src="static/img/icons/arrow.svg" style="opacity: 0.5;" alt="Ukazovací šipka"></a>
-    </div>
+      <div class="mobile-buttons">
+      <a href="https://rezervujeme.cz/savasana/" class="btn btn--dark">
+        Rezervace lekce</a>
+      <a href="/navod/" class="btn btn--sign">
+        Jak rezervovat?</a>
+      </div>
+      <a href="#main-page">
+        <img src="static/img/icons/arrow.svg" style="opacity: 0.5;" alt="Ukazovací šipka"></a>
+      </div>
    </div>
    </div>
 
@@ -80,7 +86,10 @@
     <div class="header__main">
       <h1 class="scroll">Jóga je více <br> než jen fyzické cvičení.</h1>
       <p class="scroll scroll2 color">Jsme rodinné jógové studio pro lidi se zájmem o zdravý <br>životní styl. Vaše oblíbené místo v srdci Jablonce.</p>
-      <a href="https://rezervujeme.cz/savasana/" class="btn btn--sign">Rezervace</a>
+      <div class="header__buttons">
+        <a href="https://rezervujeme.cz/savasana/" class="btn btn--dark">Rezervace lekce</a>
+        <a href="/navod/" class="btn btn--sign">Co nabízí rezervační systém?</a>
+      </div>
     </div>
    </div>
     </div>
@@ -330,7 +339,7 @@
           </div>
           </div>
 
-    <section class="asked">
+    <section class="asked" style="display:none;">
       <h2>Často kladené otázky</h2>
       <div class="asked-main">
       <div class="questions">

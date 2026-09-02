@@ -46,6 +46,7 @@ permalink: /aktuality/index.html
           <li class="menu menu--active"><a href="../aktuality">Aktuality</a></li>
           <li class="menu"><a href="../lektori">Lektoři</a></li>
           <li class="menu"><a href="../kontakt">Kontakt</a></li>
+          <li class="menu only-mobile"><a href="/navod/">Co nabízí rezervační systém?</a></li>
           <li class="only-desktop"><a href="https://rezervujeme.cz/savasana/"
               class="btn btn--white btn--sign">Rezervace</a></li>
         </div>
@@ -222,84 +223,93 @@ permalink: /aktuality/index.html
   <script src="../static/js/hamburger.js"></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
   const container = document.querySelector(".news--all");
   const articles = Array.from(document.querySelectorAll(".news-item"));
 
-  // 1) Načíst datum
+  const getCategory = article =>
+    article.querySelector(".news-category")?.textContent.trim().toLowerCase() || "";
+
+  // 1) Načíst datum a kategorii
   const parsed = articles.map(article => {
-      const iso = article.getAttribute("data-date");
-      const date = new Date(iso);
-      return { article, date };
+    const iso = article.getAttribute("data-date");
+    const date = new Date(iso);
+    return { article, date, category: getCategory(article) };
   });
 
   const today = new Date();
-  today.setHours(0,0,0,0);
+  today.setHours(0, 0, 0, 0);
 
-  // 2) Rozdělit na budoucí / minulé
-  const upcoming = parsed.filter(item => item.date >= today);
-  const past = parsed.filter(item => item.date < today);
+  // 2) Připnuté nahoře jsou POUZE budoucí "důležité", seřazené vzestupně (nejbližší první)
+  const activeImportant = parsed
+    .filter(item => item.category === "důležité" && item.date >= today)
+    .sort((a, b) => a.date - b.date);
 
-  // ⭐ Přidat classu past-news
-  past.forEach(item => item.article.classList.add("past-news"));
+  const activeSet = new Set(activeImportant);
 
-  // 3) Seřadit
+  // 3) Zbytek příspěvků (bez připnutých důležitých) – sem spadnou i minulé "důležité"
+  const remaining = parsed.filter(item => !activeSet.has(item));
+
+  let upcoming = remaining.filter(item => item.date >= today);
+  let past = remaining.filter(item => item.date < today);
+
   upcoming.sort((a, b) => a.date - b.date);
   past.sort((a, b) => b.date - a.date);
 
-  // 4) Doplnit do 15
-  let finalList = [...upcoming];
-  if (finalList.length < 15) {
-      const needed = 15 - finalList.length;
-      finalList = [...finalList, ...past.slice(0, needed)];
+  // Označit skutečně minulé příspěvky (včetně bývalých "důležitých")
+  past.forEach(item => item.article.classList.add("past-news"));
+
+  // 4) Doplnit zbytek do 15 (mimo připnuté budoucí důležité)
+  let rest = [...upcoming];
+  const slotsLeft = 15 - activeImportant.length;
+  if (rest.length < slotsLeft) {
+    const needed = slotsLeft - rest.length;
+    rest = [...rest, ...past.slice(0, needed)];
   }
+
+  const finalList = [...activeImportant, ...rest];
 
   // 5) Přeskládání DOM + vložení textu "Už se odehrálo"
   container.innerHTML = "";
 
   let insertedLabel = false;
   finalList.forEach(item => {
-      const isPast = item.article.classList.contains("past-news");
+    const isPast = item.article.classList.contains("past-news");
 
-      // vložit text jen jednou – před prvním minulým
-      if (isPast && !insertedLabel) {
-          const label = document.createElement("div");
-          label.className = "past-news-label";
-          label.textContent = "Už se odehrálo:";
-          container.appendChild(label);
-          insertedLabel = true;
-      }
+    if (isPast && !insertedLabel) {
+      const label = document.createElement("div");
+      label.className = "past-news-label";
+      label.textContent = "Už se odehrálo:";
+      container.appendChild(label);
+      insertedLabel = true;
+    }
 
-      container.appendChild(item.article);
+    container.appendChild(item.article);
   });
 
   // 6) Filtrování
   const buttons = document.querySelectorAll(".filter-pole button");
   buttons.forEach(btn => {
-      btn.addEventListener("click", () => {
-          const filter = btn.dataset.filter;
+    btn.addEventListener("click", () => {
+      const filter = btn.dataset.filter;
 
-          buttons.forEach(b => b.classList.remove("active"));
-          btn.classList.add("active");
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
 
-          finalList.forEach(obj => {
-              const cat = obj.article.querySelector(".news-category")?.textContent.trim().toLowerCase() || "";
-              obj.article.style.display = (filter === "all" || cat === filter) ? "" : "none";
-          });
-
-          // schovat nebo zobrazit label podle filtru
-          const label = container.querySelector(".past-news-label");
-          if (label) {
-              const anyVisiblePast = finalList.some(o =>
-                  o.article.classList.contains("past-news") &&
-                  (filter === "all" ||
-                    (o.article.querySelector(".news-category")?.textContent.trim().toLowerCase() === filter)) &&
-                  o.article.style.display !== "none"
-              );
-
-              label.style.display = anyVisiblePast ? "" : "none";
-          }
+      finalList.forEach(obj => {
+        obj.article.style.display = (filter === "all" || obj.category === filter) ? "" : "none";
       });
+
+      const label = container.querySelector(".past-news-label");
+      if (label) {
+        const anyVisiblePast = finalList.some(o =>
+          o.article.classList.contains("past-news") &&
+          (filter === "all" || o.category === filter) &&
+          o.article.style.display !== "none"
+        );
+
+        label.style.display = anyVisiblePast ? "" : "none";
+      }
+    });
   });
 });
 </script>
