@@ -16,4 +16,4 @@ V sobotu a neděli **10-11.10. se koná unikátní seminář Vitalita a energie:
 
 Více informací o lekcích najdete v [rezervačním systému](https://savasana.rezervujeme.cz/) v popisu lekcí. Více informací ke všem chystaným událostem najdete v [Aktualitách na webu](https://www.savasana.cz/aktuality/) a na [našem FB](https://www.facebook.com/savasanajablonec).
 
-***Budeme rádi, když nové lekce vyzkoušíte. Budeme rádi, když se společně uvidíme na semináři. A jsme vděční, že navštěvujete naše pravidelné lekce a že vás to s námi baví :).***
+*Budeme rádi, když nové lekce vyzkoušíte. Budeme rádi, když se společně uvidíme na semináři. A jsme vděční, že navštěvujete naše pravidelné lekce a že vás to s námi baví :).*
