@@ -1,7 +1,7 @@
 ---
 title: Náš pravidelný rozvrh a zářijové novinky
 date: 2026-09-30T12:11:00.000+02:00
-image: /static/uploads/září.jpg
+image: /static/uploads/září.png
 category: Důležité
 ---
 Zde vidíte všechny pravidelné lekce organizované Šavásana studiem a také přehled nových lekcí a chystané speciální akce. Ať máte přehled :)
