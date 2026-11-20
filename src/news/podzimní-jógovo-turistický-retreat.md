@@ -4,7 +4,7 @@ date: 2026-11-20T16:00:00.000+01:00
 image: /static/uploads/2022-08-05.webp
 category: Akce
 ---
-***Máme plno! Můžete se ale hlásit nako náhradník.***
+***Máme plno! Už se moc těšíme na společný čas :)***
 
 \---------------------------------------------------------------------------------------------------------
 
