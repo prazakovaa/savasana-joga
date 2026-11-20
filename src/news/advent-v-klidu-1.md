@@ -1,6 +1,6 @@
 ---
 title: Advent v klidu
-date: 2026-11-20T18:30:00.000+01:00
+date: 2026-12-04T18:30:00.000+01:00
 image: /static/uploads/podzimní-relax.jpg
 image2: ""
 category: Akce
