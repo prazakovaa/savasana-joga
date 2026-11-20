@@ -1,7 +1,8 @@
 ---
 title: Advent v klidu
-date: 2026-11-06T18:30:00.000+01:00
-image2: /static/uploads/podzimní-relax.jpg
+date: 2026-11-20T18:30:00.000+01:00
+image: /static/uploads/podzimní-relax.jpg
+image2: ""
 category: Akce
 ---
 ***Dopřejte si ještě před závěrem roku ten největší luxus dneška: Vyživující čas pro sebe.***
